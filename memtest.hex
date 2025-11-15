@@ -1,0 +1,16 @@
+// memtest.hex
+// Set the first and last two 16-bit words in each 512 word block ram to a value
+// that will equal 0x400 when added to its address.
+
+@000
+0400
+03ff
+@1fe
+0202
+0201
+@200
+0200
+01ff
+@3fe
+0002
+0001

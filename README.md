@@ -1,5 +1,5 @@
 ## ECE3710 – Computer Design Lab
-### Group Project: RISC-Style CPU with Forth Interpreter (Luke Stillings, Byron Stewart, Sean Moon, Matthew Lee
+### Group Project: RISC-Style CPU with Forth Interpreter (Luke Stillings, Byron Stewart, Sean Moon, Matthew Lee)
 
 ### Overview
 

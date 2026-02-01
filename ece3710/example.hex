@@ -1,0 +1,16 @@
+@0000
+0051		// ADD R0 R1
+0293		// SUB 2 R3
+54ff		// ADDI R4 0xFF
+350a		// XORI R5 0b1010
+9645		// SUBI R6 69
+0000		// WAIT
+0000		// WAIT R2 R5
+07d8		// MOV R7 R8
+@00F0
+520d		// ADDI R2 13
+0251		// ADD R2 R1
+45c1		// JUMP 5 R1
+45c1		// JUMP 0101 R1
+c540		// Bcond 5 Loop
+

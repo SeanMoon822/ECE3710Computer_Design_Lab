@@ -1,0 +1,2113 @@
+@0000
+dd00 // 0000:     MOVI WP WP0                         ; setup working stack
+fd20 // 0001:     MOVI WP WP0                         ; setup working stack
+df00 // 0002:     MOVI RP RP0                         ; setup return stack
+ff30 // 0003:     MOVI RP RP0                         ; setup return stack
+d809 // 0004:     MOVI EP START                       ; point execution to first word
+f800 // 0005:     MOVI EP START                       ; point execution to first word
+4938 // 0006:     LOADI RW EP                         ; load word address
+4a39 // 0007:     LOADI RX RW                         ; load code address
+4eca // 0008:     JUC RX                              ; jump into word code routine
+080e // 0009:     WORD RESTART
+486f // 000a:     STORD SRC RP                        ; decrement pointer and store word
+08d9 // 000b:     MOV EP RW                           ; point execution to word body
+4938 // 000c:     LOADI RW EP                         ; load word address
+4a39 // 000d:     LOADI RX RW                         ; load code address
+4eca // 000e:     JUC RX                              ; jump into word code routine
+4e7d // 000f:     STORI SRC WP                        ; store word and increment pointer
+0ed9 // 0010:     MOV WT RW                           ; put variable address into stack top
+4938 // 0011:     LOADI RW EP                         ; load word address
+4a39 // 0012:     LOADI RX RW                         ; load code address
+4eca // 0013:     JUC RX                              ; jump into word code routine
+4e7d // 0014:     STORI SRC WP                        ; store word and increment pointer
+4e09 // 0015:     LOAD WT RW                          ; load constant value into stack top
+4938 // 0016:     LOADI RW EP                         ; load word address
+4a39 // 0017:     LOADI RX RW                         ; load code address
+4eca // 0018:     JUC RX                              ; jump into word code routine
+0357 // 0019: SYM'S STRING STR                        ; name string
+5030 // 001a: SYM'S STRING STR                        ; name string
+0019 // 001b:     WORD SYM'S                          ; name pointer
+0000 // 001c: SYM'N WORD LASTWORD                     ; link pointer
+0014 // 001d: SYM WORD DOCONST                        ; code pointer
+2000 // 001e:     WORD VAL                            ; value
+0352 // 001f: SYM'S STRING STR                        ; name string
+5030 // 0020: SYM'S STRING STR                        ; name string
+001f // 0021:     WORD SYM'S                          ; name pointer
+001c // 0022: SYM'N WORD LASTWORD                     ; link pointer
+0014 // 0023: SYM WORD DOCONST                        ; code pointer
+3000 // 0024:     WORD VAL                            ; value
+0356 // 0025: SYM'S STRING STR                        ; name string
+4741 // 0026: SYM'S STRING STR                        ; name string
+0025 // 0027:     WORD SYM'S                          ; name pointer
+0022 // 0028: SYM'N WORD LASTWORD                     ; link pointer
+0014 // 0029: SYM WORD DOCONST                        ; code pointer
+3000 // 002a:     WORD VAL                            ; value
+0354 // 002b: SYM'S STRING STR                        ; name string
+4942 // 002c: SYM'S STRING STR                        ; name string
+002b // 002d:     WORD SYM'S                          ; name pointer
+0028 // 002e: SYM'N WORD LASTWORD                     ; link pointer
+0014 // 002f: SYM WORD DOCONST                        ; code pointer
+3c00 // 0030:     WORD VAL                            ; value
+074f // 0031: SYM'S STRING STR                        ; name string
+5554 // 0032: SYM'S STRING STR                        ; name string
+5245 // 0033: SYM'S STRING STR                        ; name string
+4730 // 0034: SYM'S STRING STR                        ; name string
+0031 // 0035:     WORD SYM'S                          ; name pointer
+002e // 0036: SYM'N WORD LASTWORD                     ; link pointer
+0014 // 0037: SYM WORD DOCONST                        ; code pointer
+4000 // 0038:     WORD VAL                            ; value
+074f // 0039: SYM'S STRING STR                        ; name string
+5554 // 003a: SYM'S STRING STR                        ; name string
+5245 // 003b: SYM'S STRING STR                        ; name string
+4731 // 003c: SYM'S STRING STR                        ; name string
+0039 // 003d:     WORD SYM'S                          ; name pointer
+0036 // 003e: SYM'N WORD LASTWORD                     ; link pointer
+0014 // 003f: SYM WORD DOCONST                        ; code pointer
+4001 // 0040:     WORD VAL                            ; value
+064b // 0041: SYM'S STRING STR                        ; name string
+4559 // 0042: SYM'S STRING STR                        ; name string
+5245 // 0043: SYM'S STRING STR                        ; name string
+4700 // 0044: SYM'S STRING STR                        ; name string
+0041 // 0045:     WORD SYM'S                          ; name pointer
+003e // 0046: SYM'N WORD LASTWORD                     ; link pointer
+0014 // 0047: SYM WORD DOCONST                        ; code pointer
+4002 // 0048:     WORD VAL                            ; value
+0643 // 0049: SYM'S STRING STR                        ; name string
+5552 // 004a: SYM'S STRING STR                        ; name string
+534f // 004b: SYM'S STRING STR                        ; name string
+5200 // 004c: SYM'S STRING STR                        ; name string
+0049 // 004d:     WORD SYM'S                          ; name pointer
+0046 // 004e: SYM'N WORD LASTWORD                     ; link pointer
+0014 // 004f: SYM WORD DOCONST                        ; code pointer
+4003 // 0050:     WORD VAL                            ; value
+0442 // 0051: SYM'S STRING STR                        ; name string
+4153 // 0052: SYM'S STRING STR                        ; name string
+4500 // 0053: SYM'S STRING STR                        ; name string
+0051 // 0054:     WORD SYM'S                          ; name pointer
+004e // 0055: SYM'N WORD LASTWORD                     ; link pointer
+000f // 0056: SYM WORD DOVAR                          ; code pointer
+000a // 0057:     WORD VAL                            ; value
+0448 // 0058: SYM'S STRING STR                        ; name string
+4552 // 0059: SYM'S STRING STR                        ; name string
+4500 // 005a: SYM'S STRING STR                        ; name string
+0058 // 005b:     WORD SYM'S                          ; name pointer
+0055 // 005c: SYM'N WORD LASTWORD                     ; link pointer
+000f // 005d: SYM WORD DOVAR                          ; code pointer
+0840 // 005e:     WORD VAL                            ; value
+044c // 005f: SYM'S STRING STR                        ; name string
+4153 // 0060: SYM'S STRING STR                        ; name string
+5400 // 0061: SYM'S STRING STR                        ; name string
+005f // 0062:     WORD SYM'S                          ; name pointer
+005c // 0063: SYM'N WORD LASTWORD                     ; link pointer
+000f // 0064: SYM WORD DOVAR                          ; code pointer
+081c // 0065:     WORD VAL                            ; value
+0348 // 0066: SYM'S STRING STR                        ; name string
+4c44 // 0067: SYM'S STRING STR                        ; name string
+0066 // 0068:     WORD SYM'S                          ; name pointer
+0063 // 0069: SYM'N WORD LASTWORD                     ; link pointer
+000f // 006a: SYM WORD DOVAR                          ; code pointer
+0000 // 006b:     WORD VAL                            ; value
+033e // 006c: SYM'S STRING STR                        ; name string
+494e // 006d: SYM'S STRING STR                        ; name string
+006c // 006e:     WORD SYM'S                          ; name pointer
+0069 // 006f: SYM'N WORD LASTWORD                     ; link pointer
+000f // 0070: SYM WORD DOVAR                          ; code pointer
+0000 // 0071:     WORD VAL                            ; value
+0423 // 0072: SYM'S STRING STR                        ; name string
+5449 // 0073: SYM'S STRING STR                        ; name string
+4200 // 0074: SYM'S STRING STR                        ; name string
+0072 // 0075:     WORD SYM'S                          ; name pointer
+006f // 0076: SYM'N WORD LASTWORD                     ; link pointer
+000f // 0077: SYM WORD DOVAR                          ; code pointer
+0000 // 0078:     WORD VAL                            ; value
+043e // 0079: SYM'S STRING STR                        ; name string
+5647 // 007a: SYM'S STRING STR                        ; name string
+4100 // 007b: SYM'S STRING STR                        ; name string
+0079 // 007c:     WORD SYM'S                          ; name pointer
+0076 // 007d: SYM'N WORD LASTWORD                     ; link pointer
+000f // 007e: SYM WORD DOVAR                          ; code pointer
+0000 // 007f:     WORD VAL                            ; value
+0242 // 0080: SYM'S STRING STR                        ; name string
+5300 // 0081: SYM'S STRING STR                        ; name string
+0080 // 0082:     WORD SYM'S                          ; name pointer
+007d // 0083: SYM'N WORD LASTWORD                     ; link pointer
+0014 // 0084: SYM WORD DOCONST                        ; code pointer
+0008 // 0085:     WORD VAL                            ; value
+024c // 0086: SYM'S STRING STR                        ; name string
+4600 // 0087: SYM'S STRING STR                        ; name string
+0086 // 0088:     WORD SYM'S                          ; name pointer
+0083 // 0089: SYM'N WORD LASTWORD                     ; link pointer
+0014 // 008a: SYM WORD DOCONST                        ; code pointer
+000a // 008b:     WORD VAL                            ; value
+0243 // 008c: SYM'S STRING STR                        ; name string
+5200 // 008d: SYM'S STRING STR                        ; name string
+008c // 008e:     WORD SYM'S                          ; name pointer
+0089 // 008f: SYM'N WORD LASTWORD                     ; link pointer
+0014 // 0090: SYM WORD DOCONST                        ; code pointer
+000d // 0091:     WORD VAL                            ; value
+0253 // 0092: SYM'S STRING STR                        ; name string
+5000 // 0093: SYM'S STRING STR                        ; name string
+0092 // 0094:     WORD SYM'S                          ; name pointer
+008f // 0095: SYM'N WORD LASTWORD                     ; link pointer
+0014 // 0096: SYM WORD DOCONST                        ; code pointer
+0020 // 0097:     WORD VAL                            ; value
+043f // 0098: SYM'S STRING STR                        ; name string
+4b45 // 0099: SYM'S STRING STR                        ; name string
+5900 // 009a: SYM'S STRING STR                        ; name string
+0098 // 009b:     WORD SYM'S                          ; name pointer
+0095 // 009c: SYM'N WORD LASTWORD                     ; link pointer
+000a // 009d: SYM WORD DOENTER                        ; code pointer
+0047 // 009e:     WORD KEYREG_
+0311 // 009f:     WORD FETCH                          ; read register
+0259 // 00a0:     WORD DUP
+01fe // 00a1:     WORD ZBRANCH                        ; if zero exit
+00a4 // 00a2:     WORD QKEY0
+02c1 // 00a3:     WORD NONE                           ; else push true flag
+01d1 // 00a4:     WORD EXIT
+034b // 00a5: SYM'S STRING STR                        ; name string
+4559 // 00a6: SYM'S STRING STR                        ; name string
+00a5 // 00a7:     WORD SYM'S                          ; name pointer
+009c // 00a8: SYM'N WORD LASTWORD                     ; link pointer
+000a // 00a9: SYM WORD DOENTER                        ; code pointer
+009d // 00aa:     WORD QKEY                           ; check key
+01fe // 00ab:     WORD ZBRANCH                        ; if zero try again
+00aa // 00ac:     WORD KEY0
+01d1 // 00ad:     WORD EXIT
+0653 // 00ae: SYM'S STRING STR                        ; name string
+4352 // 00af: SYM'S STRING STR                        ; name string
+4f4c // 00b0: SYM'S STRING STR                        ; name string
+4c00 // 00b1: SYM'S STRING STR                        ; name string
+00ae // 00b2:     WORD SYM'S                          ; name pointer
+00a8 // 00b3: SYM'N WORD LASTWORD                     ; link pointer
+000a // 00b4: SYM WORD DOENTER                        ; code pointer
+0029 // 00b5:     WORD VGA
+02ff // 00b6:     WORD ATOCA
+0259 // 00b7:     WORD DUP
+01e7 // 00b8:     WORD LITERAL
+0050 // 00b9:     WORD 80
+0409 // 00ba:     WORD ADD_                           ; start at second line
+0289 // 00bb:     WORD SWAP
+01e7 // 00bc:     WORD LITERAL
+1270 // 00bd:     WORD 4720                           ; move 80x59 characters
+015a // 00be:     WORD CMOVE
+0289 // 00bf:     WORD SWAP
+0245 // 00c0:     WORD DROP                           ; keep source pointer
+01e7 // 00c1:     WORD LITERAL
+0050 // 00c2:     WORD 80                             ; fill 80 characters
+0096 // 00c3:     WORD SP                             ; with spaces
+016e // 00c4:     WORD FILL
+01e7 // 00c5:     WORD LITERAL
+ffb0 // 00c6:     WORD -80
+007e // 00c7:     WORD PVGA
+035f // 00c8:     WORD ADDSTORE                       ; move position up one line
+01d1 // 00c9:     WORD EXIT
+0445 // 00ca: SYM'S STRING STR                        ; name string
+4d49 // 00cb: SYM'S STRING STR                        ; name string
+5400 // 00cc: SYM'S STRING STR                        ; name string
+00ca // 00cd:     WORD SYM'S                          ; name pointer
+00b3 // 00ce: SYM'N WORD LASTWORD                     ; link pointer
+000a // 00cf: SYM WORD DOENTER                        ; code pointer
+0259 // 00d0:     WORD DUP
+0084 // 00d1:     WORD BS
+0397 // 00d2:     WORD EQUAL
+01fe // 00d3:     WORD ZBRANCH                        ; if backspace
+00db // 00d4:     WORD EMIT0
+0245 // 00d5:     WORD DROP
+02c1 // 00d6:     WORD NONE
+007e // 00d7:     WORD PVGA
+035f // 00d8:     WORD ADDSTORE                       ; then move to previous character
+01f3 // 00d9:     WORD BRANCH
+0102 // 00da:     WORD EMIT3
+0259 // 00db:     WORD DUP
+008a // 00dc:     WORD LF
+0397 // 00dd:     WORD EQUAL
+01fe // 00de:     WORD ZBRANCH                        ; if line feed
+00e7 // 00df:     WORD EMIT1
+0245 // 00e0:     WORD DROP
+01e7 // 00e1:     WORD LITERAL
+0050 // 00e2:     WORD 80
+007e // 00e3:     WORD PVGA
+035f // 00e4:     WORD ADDSTORE                       ; then move to next line
+01f3 // 00e5:     WORD BRANCH
+0102 // 00e6:     WORD EMIT3
+0259 // 00e7:     WORD DUP
+0090 // 00e8:     WORD CR
+0397 // 00e9:     WORD EQUAL
+01fe // 00ea:     WORD ZBRANCH                        ; if character is carriage return
+00f9 // 00eb:     WORD EMIT2
+0245 // 00ec:     WORD DROP
+007e // 00ed:     WORD PVGA
+0311 // 00ee:     WORD FETCH
+0259 // 00ef:     WORD DUP
+01e7 // 00f0:     WORD LITERAL
+0050 // 00f1:     WORD 80                             ; then divide by screen width
+0473 // 00f2:     WORD DIVMOD
+0245 // 00f3:     WORD DROP
+0428 // 00f4:     WORD SUB_                           ; and subtract remainder
+007e // 00f5:     WORD PVGA
+0333 // 00f6:     WORD STORE
+01f3 // 00f7:     WORD BRANCH
+0102 // 00f8:     WORD EMIT3
+0029 // 00f9:     WORD VGA
+02ff // 00fa:     WORD ATOCA
+007e // 00fb:     WORD PVGA
+0311 // 00fc:     WORD FETCH
+0409 // 00fd:     WORD ADD_
+033e // 00fe:     WORD CSTORE                         ; otherwise output character
+02b7 // 00ff:     WORD ONE
+007e // 0100:     WORD PVGA
+035f // 0101:     WORD ADDSTORE                       ; and increment position
+007e // 0102:     WORD PVGA
+0311 // 0103:     WORD FETCH
+036b // 0104:     WORD ZLESS
+01fe // 0105:     WORD ZBRANCH                        ; if position is less than zero
+010a // 0106:     WORD EMIT4
+02ae // 0107:     WORD ZERO
+007e // 0108:     WORD PVGA
+0333 // 0109:     WORD STORE                          ; then keep it at zero
+007e // 010a:     WORD PVGA
+0311 // 010b:     WORD FETCH
+01e7 // 010c:     WORD LITERAL
+12c0 // 010d:     WORD 4800
+0397 // 010e:     WORD EQUAL
+01fe // 010f:     WORD ZBRANCH                        ; if position went off the bottom
+0112 // 0110:     WORD EMIT5
+00b4 // 0111:     WORD SCROLL                         ; then scroll the output
+007e // 0112:     WORD PVGA
+0311 // 0113:     WORD FETCH                          ; get current PVGA
+004f // 0114:     WORD CURSOR_
+0333 // 0115:     WORD STORE                          ; store into cursor register
+01d1 // 0116:     WORD EXIT
+0450 // 0117: SYM'S STRING STR                        ; name string
+4147 // 0118: SYM'S STRING STR                        ; name string
+4500 // 0119: SYM'S STRING STR                        ; name string
+0117 // 011a:     WORD SYM'S                          ; name pointer
+00ce // 011b: SYM'N WORD LASTWORD                     ; link pointer
+000a // 011c: SYM WORD DOENTER                        ; code pointer
+0029 // 011d:     WORD VGA
+02ff // 011e:     WORD ATOCA
+01e7 // 011f:     WORD LITERAL
+12c0 // 0120:     WORD 4800                           ; 80x60 characters
+0096 // 0121:     WORD SP
+016e // 0122:     WORD FILL                           ; fill with spaces
+02ae // 0123:     WORD ZERO
+007e // 0124:     WORD PVGA
+0333 // 0125:     WORD STORE                          ; reset VGA location
+01d1 // 0126:     WORD EXIT
+044c // 0127: SYM'S STRING STR                        ; name string
+494e // 0128: SYM'S STRING STR                        ; name string
+4500 // 0129: SYM'S STRING STR                        ; name string
+0127 // 012a:     WORD SYM'S                          ; name pointer
+011b // 012b: SYM'N WORD LASTWORD                     ; link pointer
+000a // 012c: SYM WORD DOENTER                        ; code pointer
+0090 // 012d:     WORD CR
+00cf // 012e:     WORD EMIT                           ; output carriage return
+008a // 012f:     WORD LF
+00cf // 0130:     WORD EMIT                           ; output line feed
+01d1 // 0131:     WORD EXIT
+0553 // 0132: SYM'S STRING STR                        ; name string
+5041 // 0133: SYM'S STRING STR                        ; name string
+4345 // 0134: SYM'S STRING STR                        ; name string
+0132 // 0135:     WORD SYM'S                          ; name pointer
+012b // 0136: SYM'N WORD LASTWORD                     ; link pointer
+000a // 0137: SYM WORD DOENTER                        ; code pointer
+0096 // 0138:     WORD SP
+00cf // 0139:     WORD EMIT                           ; output space
+01d1 // 013a:     WORD EXIT
+0653 // 013b: SYM'S STRING STR                        ; name string
+5041 // 013c: SYM'S STRING STR                        ; name string
+4345 // 013d: SYM'S STRING STR                        ; name string
+5300 // 013e: SYM'S STRING STR                        ; name string
+013b // 013f:     WORD SYM'S                          ; name pointer
+0136 // 0140: SYM'N WORD LASTWORD                     ; link pointer
+000a // 0141: SYM WORD DOENTER                        ; code pointer
+02f4 // 0142:     WORD RPUSH                          ; setup loop counter
+01f3 // 0143:     WORD BRANCH
+0146 // 0144:     WORD SPACES_1
+0137 // 0145:     WORD SPACE                          ; output space
+020b // 0146:     WORD LNEXT
+0145 // 0147:     WORD SPACES_0
+01d1 // 0148:     WORD EXIT
+0543 // 0149: SYM'S STRING STR                        ; name string
+4f55 // 014a: SYM'S STRING STR                        ; name string
+4e54 // 014b: SYM'S STRING STR                        ; name string
+0149 // 014c:     WORD SYM'S                          ; name pointer
+0140 // 014d: SYM'N WORD LASTWORD                     ; link pointer
+000a // 014e: SYM WORD DOENTER                        ; code pointer
+02ff // 014f:     WORD ATOCA                          ; get character address
+0259 // 0150:     WORD DUP
+0421 // 0151:     WORD ONEADD                         ; get first character pointer
+0289 // 0152:     WORD SWAP
+031a // 0153:     WORD CFETCH                         ; get string length
+01d1 // 0154:     WORD EXIT
+0543 // 0155: SYM'S STRING STR                        ; name string
+4d4f // 0156: SYM'S STRING STR                        ; name string
+5645 // 0157: SYM'S STRING STR                        ; name string
+0155 // 0158:     WORD SYM'S                          ; name pointer
+014d // 0159: SYM'N WORD LASTWORD                     ; link pointer
+000a // 015a: SYM WORD DOENTER                        ; code pointer
+02f4 // 015b:     WORD RPUSH
+01f3 // 015c:     WORD BRANCH
+0166 // 015d:     WORD CMOVE1
+027c // 015e:     WORD OVER
+031a // 015f:     WORD CFETCH                         ; read source
+027c // 0160:     WORD OVER
+033e // 0161:     WORD CSTORE                         ; write destination
+0421 // 0162:     WORD ONEADD                         ; increment destination
+0289 // 0163:     WORD SWAP
+0421 // 0164:     WORD ONEADD                         ; increment source
+0289 // 0165:     WORD SWAP
+020b // 0166:     WORD LNEXT
+015e // 0167:     WORD CMOVE0
+01d1 // 0168:     WORD EXIT
+0446 // 0169: SYM'S STRING STR                        ; name string
+494c // 016a: SYM'S STRING STR                        ; name string
+4c00 // 016b: SYM'S STRING STR                        ; name string
+0169 // 016c:     WORD SYM'S                          ; name pointer
+0159 // 016d: SYM'N WORD LASTWORD                     ; link pointer
+000a // 016e: SYM WORD DOENTER                        ; code pointer
+0289 // 016f:     WORD SWAP
+02f4 // 0170:     WORD RPUSH                          ; setup loop counter
+0289 // 0171:     WORD SWAP
+01f3 // 0172:     WORD BRANCH
+0177 // 0173:     WORD FILL1
+0263 // 0174:     WORD DDUP
+033e // 0175:     WORD CSTORE                         ; store character
+0421 // 0176:     WORD ONEADD                         ; increment pointer
+020b // 0177:     WORD LNEXT
+0174 // 0178:     WORD FILL0
+024f // 0179:     WORD DDROP
+01d1 // 017a:     WORD EXIT
+0550 // 017b: SYM'S STRING STR                        ; name string
+4143 // 017c: SYM'S STRING STR                        ; name string
+4b53 // 017d: SYM'S STRING STR                        ; name string
+017b // 017e:     WORD SYM'S                          ; name pointer
+016d // 017f: SYM'N WORD LASTWORD                     ; link pointer
+000a // 0180: SYM WORD DOENTER                        ; code pointer
+0259 // 0181:     WORD DUP
+02f4 // 0182:     WORD RPUSH                          ; save start address
+02ff // 0183:     WORD ATOCA
+027c // 0184:     WORD OVER
+027c // 0185:     WORD OVER
+033e // 0186:     WORD CSTORE                         ; store length
+0421 // 0187:     WORD ONEADD                         ; increment destination
+0289 // 0188:     WORD SWAP
+015a // 0189:     WORD CMOVE
+0259 // 018a:     WORD DUP
+02b7 // 018b:     WORD ONE
+03d6 // 018c:     WORD AND_
+01fe // 018d:     WORD ZBRANCH                        ; if odd destination address
+0192 // 018e:     WORD PACKS0
+02ae // 018f:     WORD ZERO
+027c // 0190:     WORD OVER
+033e // 0191:     WORD CSTORE                         ; then fill with zero
+024f // 0192:     WORD DDROP
+02df // 0193:     WORD RPOP                           ; restore start address
+01d1 // 0194:     WORD EXIT
+0454 // 0195: SYM'S STRING STR                        ; name string
+5950 // 0196: SYM'S STRING STR                        ; name string
+4500 // 0197: SYM'S STRING STR                        ; name string
+0195 // 0198:     WORD SYM'S                          ; name pointer
+017f // 0199: SYM'N WORD LASTWORD                     ; link pointer
+000a // 019a: SYM WORD DOENTER                        ; code pointer
+02f4 // 019b:     WORD RPUSH                          ; setup loop counter
+01f3 // 019c:     WORD BRANCH                         ; check condition first
+01a2 // 019d:     WORD TYPE1
+0259 // 019e:     WORD DUP
+031a // 019f:     WORD CFETCH                         ; get character
+00cf // 01a0:     WORD EMIT                           ; output character
+0421 // 01a1:     WORD ONEADD                         ; next character
+020b // 01a2:     WORD LNEXT
+019e // 01a3:     WORD TYPE0
+0245 // 01a4:     WORD DROP
+01d1 // 01a5:     WORD EXIT
+053e // 01a6: SYM'S STRING STR                        ; name string
+4348 // 01a7: SYM'S STRING STR                        ; name string
+4152 // 01a8: SYM'S STRING STR                        ; name string
+01a6 // 01a9:     WORD SYM'S                          ; name pointer
+0199 // 01aa: SYM'N WORD LASTWORD                     ; link pointer
+000a // 01ab: SYM WORD DOENTER                        ; code pointer
+01e7 // 01ac:     WORD LITERAL
+007f // 01ad:     WORD 7F
+03d6 // 01ae:     WORD AND_                           ; clear MSB
+0259 // 01af:     WORD DUP
+01e7 // 01b0:     WORD LITERAL
+007f // 01b1:     WORD 7F
+0096 // 01b2:     WORD SP
+03ca // 01b3:     WORD WITHIN                         ; check if printable
+01fe // 01b4:     WORD ZBRANCH
+01b9 // 01b5:     WORD TOCHAR0
+0245 // 01b6:     WORD DROP                           ; if not printable
+01e7 // 01b7:     WORD LITERAL
+002e // 01b8:     WORD 2E                             ; then use ASCII '.'
+01d1 // 01b9:     WORD EXIT
+052e // 01ba: SYM'S STRING STR                        ; name string
+5459 // 01bb: SYM'S STRING STR                        ; name string
+5045 // 01bc: SYM'S STRING STR                        ; name string
+01ba // 01bd:     WORD SYM'S                          ; name pointer
+01aa // 01be: SYM'N WORD LASTWORD                     ; link pointer
+000a // 01bf: SYM WORD DOENTER                        ; code pointer
+02f4 // 01c0:     WORD RPUSH                          ; setup loop counter
+01f3 // 01c1:     WORD BRANCH
+01c8 // 01c2:     WORD DTYPE1
+0259 // 01c3:     WORD DUP
+031a // 01c4:     WORD CFETCH                         ; get character
+01ab // 01c5:     WORD TOCHAR                         ; make printable
+00cf // 01c6:     WORD EMIT                           ; output character
+0421 // 01c7:     WORD ONEADD                         ; next character
+020b // 01c8:     WORD LNEXT
+01c3 // 01c9:     WORD DTYPE0
+0245 // 01ca:     WORD DROP
+01d1 // 01cb:     WORD EXIT
+0445 // 01cc: SYM'S STRING STR                        ; name string
+5849 // 01cd: SYM'S STRING STR                        ; name string
+5400 // 01ce: SYM'S STRING STR                        ; name string
+01cc // 01cf:     WORD SYM'S                          ; name pointer
+01be // 01d0: SYM'N WORD LASTWORD                     ; link pointer
+01d2 // 01d1: SYM WORD SYM'C                          ; code pointer
+483f // 01d2:     LOADI DST RP                        ; load word and increment pointer
+4938 // 01d3:     LOADI RW EP                         ; load word address
+4a39 // 01d4:     LOADI RX RW                         ; load code address
+4eca // 01d5:     JUC RX                              ; jump into word code routine
+0745 // 01d6: SYM'S STRING STR                        ; name string
+5845 // 01d7: SYM'S STRING STR                        ; name string
+4355 // 01d8: SYM'S STRING STR                        ; name string
+5445 // 01d9: SYM'S STRING STR                        ; name string
+01d6 // 01da:     WORD SYM'S                          ; name pointer
+01d0 // 01db: SYM'N WORD LASTWORD                     ; link pointer
+01dd // 01dc: SYM WORD SYM'C                          ; code pointer
+09de // 01dd:     MOV RW WT                           ; get word address
+4e2d // 01de:     LOADD DST WP                        ; decrement pointer and load word
+4a39 // 01df:     LOADI RX RW                         ; load code address
+4eca // 01e0:     JUC RX                              ; jump into word code routine
+074c // 01e1: SYM'S STRING STR                        ; name string
+4954 // 01e2: SYM'S STRING STR                        ; name string
+4552 // 01e3: SYM'S STRING STR                        ; name string
+414c // 01e4: SYM'S STRING STR                        ; name string
+01e1 // 01e5:     WORD SYM'S                          ; name pointer
+01db // 01e6: SYM'N WORD LASTWORD                     ; link pointer
+01e8 // 01e7: SYM WORD SYM'C                          ; code pointer
+4e7d // 01e8:     STORI SRC WP                        ; store word and increment pointer
+4e38 // 01e9:     LOADI WT EP                         ; put inline literal into stack top
+4938 // 01ea:     LOADI RW EP                         ; load word address
+4a39 // 01eb:     LOADI RX RW                         ; load code address
+4eca // 01ec:     JUC RX                              ; jump into word code routine
+0642 // 01ed: SYM'S STRING STR                        ; name string
+5241 // 01ee: SYM'S STRING STR                        ; name string
+4e43 // 01ef: SYM'S STRING STR                        ; name string
+4800 // 01f0: SYM'S STRING STR                        ; name string
+01ed // 01f1:     WORD SYM'S                          ; name pointer
+01e6 // 01f2: SYM'N WORD LASTWORD                     ; link pointer
+01f4 // 01f3: SYM WORD SYM'C                          ; code pointer
+4808 // 01f4:     LOAD EP EP                          ; point execution to inline address
+4938 // 01f5:     LOADI RW EP                         ; load word address
+4a39 // 01f6:     LOADI RX RW                         ; load code address
+4eca // 01f7:     JUC RX                              ; jump into word code routine
+0730 // 01f8: SYM'S STRING STR                        ; name string
+4252 // 01f9: SYM'S STRING STR                        ; name string
+414e // 01fa: SYM'S STRING STR                        ; name string
+4348 // 01fb: SYM'S STRING STR                        ; name string
+01f8 // 01fc:     WORD SYM'S                          ; name pointer
+01f2 // 01fd: SYM'N WORD LASTWORD                     ; link pointer
+01ff // 01fe: SYM WORD SYM'C                          ; code pointer
+0eb0 // 01ff:     CMP WT R0                           ; compare with zero
+4e2d // 0200:     LOADD DST WP                        ; decrement pointer and load word
+c0f3 // 0201:     BEQ BRANCH0                         ; if zero branch
+5801 // 0202:     ADDI EP 1                           ; else skip over inline address
+4938 // 0203:     LOADI RW EP                         ; load word address
+4a39 // 0204:     LOADI RX RW                         ; load code address
+4eca // 0205:     JUC RX                              ; jump into word code routine
+044e // 0206: SYM'S STRING STR                        ; name string
+4558 // 0207: SYM'S STRING STR                        ; name string
+5400 // 0208: SYM'S STRING STR                        ; name string
+0206 // 0209:     WORD SYM'S                          ; name pointer
+01fd // 020a: SYM'N WORD LASTWORD                     ; link pointer
+020c // 020b: SYM WORD SYM'C                          ; code pointer
+493f // 020c:     LOADI DST RP                        ; load word and increment pointer
+9901 // 020d:     SUBI RW 1                           ; decrement loop index
+496f // 020e:     STORD SRC RP                        ; decrement pointer and store word
+cde5 // 020f:     BGE BRANCH0                         ; if not negative branch
+493f // 0210:     LOADI DST RP                        ; load word and increment pointer
+5801 // 0211:     ADDI EP 1                           ; and skip over inline address
+4938 // 0212:     LOADI RW EP                         ; load word address
+4a39 // 0213:     LOADI RX RW                         ; load code address
+4eca // 0214:     JUC RX                              ; jump into word code routine
+0357 // 0215: SYM'S STRING STR                        ; name string
+5040 // 0216: SYM'S STRING STR                        ; name string
+0215 // 0217:     WORD SYM'S                          ; name pointer
+020a // 0218: SYM'N WORD LASTWORD                     ; link pointer
+021a // 0219: SYM WORD SYM'C                          ; code pointer
+4e7d // 021a:     STORI SRC WP                        ; store word and increment pointer
+0edd // 021b:     MOV WT WP                           ; put pointer into stack top
+4938 // 021c:     LOADI RW EP                         ; load word address
+4a39 // 021d:     LOADI RX RW                         ; load code address
+4eca // 021e:     JUC RX                              ; jump into word code routine
+0357 // 021f: SYM'S STRING STR                        ; name string
+5021 // 0220: SYM'S STRING STR                        ; name string
+021f // 0221:     WORD SYM'S                          ; name pointer
+0218 // 0222: SYM'N WORD LASTWORD                     ; link pointer
+0224 // 0223: SYM WORD SYM'C                          ; code pointer
+0dde // 0224:     MOV WP WT                           ; set pointer
+4e2d // 0225:     LOADD DST WP                        ; decrement pointer and load word
+4938 // 0226:     LOADI RW EP                         ; load word address
+4a39 // 0227:     LOADI RX RW                         ; load code address
+4eca // 0228:     JUC RX                              ; jump into word code routine
+0544 // 0229: SYM'S STRING STR                        ; name string
+4550 // 022a: SYM'S STRING STR                        ; name string
+5448 // 022b: SYM'S STRING STR                        ; name string
+0229 // 022c:     WORD SYM'S                          ; name pointer
+0222 // 022d: SYM'N WORD LASTWORD                     ; link pointer
+000a // 022e: SYM WORD DOENTER                        ; code pointer
+0219 // 022f:     WORD WPFETCH                        ; get pointer
+001d // 0230:     WORD WP0_                           ; get start
+0428 // 0231:     WORD SUB_                           ; get the difference
+01d1 // 0232:     WORD EXIT
+0450 // 0233: SYM'S STRING STR                        ; name string
+4943 // 0234: SYM'S STRING STR                        ; name string
+4b00 // 0235: SYM'S STRING STR                        ; name string
+0233 // 0236:     WORD SYM'S                          ; name pointer
+022d // 0237: SYM'N WORD LASTWORD                     ; link pointer
+000a // 0238: SYM WORD DOENTER                        ; code pointer
+0219 // 0239:     WORD WPFETCH                        ; get pointer
+0433 // 023a:     WORD ONESUB                         ; skip over index
+0433 // 023b:     WORD ONESUB
+0289 // 023c:     WORD SWAP
+0428 // 023d:     WORD SUB_                           ; subtract index
+0311 // 023e:     WORD FETCH                          ; get word
+01d1 // 023f:     WORD EXIT
+0444 // 0240: SYM'S STRING STR                        ; name string
+524f // 0241: SYM'S STRING STR                        ; name string
+5000 // 0242: SYM'S STRING STR                        ; name string
+0240 // 0243:     WORD SYM'S                          ; name pointer
+0237 // 0244: SYM'N WORD LASTWORD                     ; link pointer
+0246 // 0245: SYM WORD SYM'C                          ; code pointer
+4e2d // 0246:     LOADD DST WP                        ; decrement pointer and load word
+4938 // 0247:     LOADI RW EP                         ; load word address
+4a39 // 0248:     LOADI RX RW                         ; load code address
+4eca // 0249:     JUC RX                              ; jump into word code routine
+0532 // 024a: SYM'S STRING STR                        ; name string
+4452 // 024b: SYM'S STRING STR                        ; name string
+4f50 // 024c: SYM'S STRING STR                        ; name string
+024a // 024d:     WORD SYM'S                          ; name pointer
+0244 // 024e: SYM'N WORD LASTWORD                     ; link pointer
+0250 // 024f: SYM WORD SYM'C                          ; code pointer
+4e2d // 0250:     LOADD DST WP                        ; decrement pointer and load word
+4e2d // 0251:     LOADD DST WP                        ; decrement pointer and load word
+4938 // 0252:     LOADI RW EP                         ; load word address
+4a39 // 0253:     LOADI RX RW                         ; load code address
+4eca // 0254:     JUC RX                              ; jump into word code routine
+0344 // 0255: SYM'S STRING STR                        ; name string
+5550 // 0256: SYM'S STRING STR                        ; name string
+0255 // 0257:     WORD SYM'S                          ; name pointer
+024e // 0258: SYM'N WORD LASTWORD                     ; link pointer
+025a // 0259: SYM WORD SYM'C                          ; code pointer
+4e7d // 025a:     STORI SRC WP                        ; store word and increment pointer
+4938 // 025b:     LOADI RW EP                         ; load word address
+4a39 // 025c:     LOADI RX RW                         ; load code address
+4eca // 025d:     JUC RX                              ; jump into word code routine
+0432 // 025e: SYM'S STRING STR                        ; name string
+4455 // 025f: SYM'S STRING STR                        ; name string
+5000 // 0260: SYM'S STRING STR                        ; name string
+025e // 0261:     WORD SYM'S                          ; name pointer
+0258 // 0262: SYM'N WORD LASTWORD                     ; link pointer
+0264 // 0263: SYM WORD SYM'C                          ; code pointer
+492d // 0264:     LOADD DST WP                        ; decrement pointer and load word
+497d // 0265:     STORI SRC WP                        ; store word and increment pointer
+4e7d // 0266:     STORI SRC WP                        ; store word and increment pointer
+497d // 0267:     STORI SRC WP                        ; store word and increment pointer
+4938 // 0268:     LOADI RW EP                         ; load word address
+4a39 // 0269:     LOADI RX RW                         ; load code address
+4eca // 026a:     JUC RX                              ; jump into word code routine
+043f // 026b: SYM'S STRING STR                        ; name string
+4455 // 026c: SYM'S STRING STR                        ; name string
+5000 // 026d: SYM'S STRING STR                        ; name string
+026b // 026e:     WORD SYM'S                          ; name pointer
+0262 // 026f: SYM'N WORD LASTWORD                     ; link pointer
+0271 // 0270: SYM WORD SYM'C                          ; code pointer
+0eb0 // 0271:     CMP WT R0                           ; compare with zero
+c002 // 0272:     BEQ QDUP0                           ; if zero exit
+4e7d // 0273:     STORI SRC WP                        ; store word and increment pointer
+4938 // 0274:     LOADI RW EP                         ; load word address
+4a39 // 0275:     LOADI RX RW                         ; load code address
+4eca // 0276:     JUC RX                              ; jump into word code routine
+044f // 0277: SYM'S STRING STR                        ; name string
+5645 // 0278: SYM'S STRING STR                        ; name string
+5200 // 0279: SYM'S STRING STR                        ; name string
+0277 // 027a:     WORD SYM'S                          ; name pointer
+026f // 027b: SYM'N WORD LASTWORD                     ; link pointer
+027d // 027c: SYM WORD SYM'C                          ; code pointer
+492d // 027d:     LOADD DST WP                        ; decrement pointer and load word
+497d // 027e:     STORI SRC WP                        ; store word and increment pointer
+4e7d // 027f:     STORI SRC WP                        ; store word and increment pointer
+0ed9 // 0280:     MOV WT RW                           ; put second word into stack top
+4938 // 0281:     LOADI RW EP                         ; load word address
+4a39 // 0282:     LOADI RX RW                         ; load code address
+4eca // 0283:     JUC RX                              ; jump into word code routine
+0453 // 0284: SYM'S STRING STR                        ; name string
+5741 // 0285: SYM'S STRING STR                        ; name string
+5000 // 0286: SYM'S STRING STR                        ; name string
+0284 // 0287:     WORD SYM'S                          ; name pointer
+027b // 0288: SYM'N WORD LASTWORD                     ; link pointer
+028a // 0289: SYM WORD SYM'C                          ; code pointer
+492d // 028a:     LOADD DST WP                        ; decrement pointer and load word
+4e7d // 028b:     STORI SRC WP                        ; store word and increment pointer
+0ed9 // 028c:     MOV WT RW                           ; put second word into stack top
+4938 // 028d:     LOADI RW EP                         ; load word address
+4a39 // 028e:     LOADI RX RW                         ; load code address
+4eca // 028f:     JUC RX                              ; jump into word code routine
+0352 // 0290: SYM'S STRING STR                        ; name string
+4f54 // 0291: SYM'S STRING STR                        ; name string
+0290 // 0292:     WORD SYM'S                          ; name pointer
+0288 // 0293: SYM'N WORD LASTWORD                     ; link pointer
+0295 // 0294: SYM WORD SYM'C                          ; code pointer
+492d // 0295:     LOADD DST WP                        ; decrement pointer and load word
+4a2d // 0296:     LOADD DST WP                        ; decrement pointer and load word
+497d // 0297:     STORI SRC WP                        ; store word and increment pointer
+4e7d // 0298:     STORI SRC WP                        ; store word and increment pointer
+0eda // 0299:     MOV WT RX                           ; put third word into stack top
+4938 // 029a:     LOADI RW EP                         ; load word address
+4a39 // 029b:     LOADI RX RW                         ; load code address
+4eca // 029c:     JUC RX                              ; jump into word code routine
+042d // 029d: SYM'S STRING STR                        ; name string
+524f // 029e: SYM'S STRING STR                        ; name string
+5400 // 029f: SYM'S STRING STR                        ; name string
+029d // 02a0:     WORD SYM'S                          ; name pointer
+0293 // 02a1: SYM'N WORD LASTWORD                     ; link pointer
+02a3 // 02a2: SYM WORD SYM'C                          ; code pointer
+492d // 02a3:     LOADD DST WP                        ; decrement pointer and load word
+4a2d // 02a4:     LOADD DST WP                        ; decrement pointer and load word
+4e7d // 02a5:     STORI SRC WP                        ; store word and increment pointer
+4a7d // 02a6:     STORI SRC WP                        ; store word and increment pointer
+0ed9 // 02a7:     MOV WT RW                           ; put second word into stack top
+4938 // 02a8:     LOADI RW EP                         ; load word address
+4a39 // 02a9:     LOADI RX RW                         ; load code address
+4eca // 02aa:     JUC RX                              ; jump into word code routine
+0130 // 02ab: SYM'S STRING STR                        ; name string
+02ab // 02ac:     WORD SYM'S                          ; name pointer
+02a1 // 02ad: SYM'N WORD LASTWORD                     ; link pointer
+02af // 02ae: SYM WORD SYM'C                          ; code pointer
+4e7d // 02af:     STORI SRC WP                        ; store word and increment pointer
+ee00 // 02b0:     MOVSI WT 0                          ; put 0 into stack top
+4938 // 02b1:     LOADI RW EP                         ; load word address
+4a39 // 02b2:     LOADI RX RW                         ; load code address
+4eca // 02b3:     JUC RX                              ; jump into word code routine
+0131 // 02b4: SYM'S STRING STR                        ; name string
+02b4 // 02b5:     WORD SYM'S                          ; name pointer
+02ad // 02b6: SYM'N WORD LASTWORD                     ; link pointer
+02b8 // 02b7: SYM WORD SYM'C                          ; code pointer
+4e7d // 02b8:     STORI SRC WP                        ; store word and increment pointer
+ee01 // 02b9:     MOVSI WT 1                          ; put 1 into stack top
+4938 // 02ba:     LOADI RW EP                         ; load word address
+4a39 // 02bb:     LOADI RX RW                         ; load code address
+4eca // 02bc:     JUC RX                              ; jump into word code routine
+022d // 02bd: SYM'S STRING STR                        ; name string
+3100 // 02be: SYM'S STRING STR                        ; name string
+02bd // 02bf:     WORD SYM'S                          ; name pointer
+02b6 // 02c0: SYM'N WORD LASTWORD                     ; link pointer
+02c2 // 02c1: SYM WORD SYM'C                          ; code pointer
+4e7d // 02c2:     STORI SRC WP                        ; store word and increment pointer
+eeff // 02c3:     MOVSI WT -1                         ; put -1 into stack top
+4938 // 02c4:     LOADI RW EP                         ; load word address
+4a39 // 02c5:     LOADI RX RW                         ; load code address
+4eca // 02c6:     JUC RX                              ; jump into word code routine
+0352 // 02c7: SYM'S STRING STR                        ; name string
+5040 // 02c8: SYM'S STRING STR                        ; name string
+02c7 // 02c9:     WORD SYM'S                          ; name pointer
+02c0 // 02ca: SYM'N WORD LASTWORD                     ; link pointer
+02cc // 02cb: SYM WORD SYM'C                          ; code pointer
+4e7d // 02cc:     STORI SRC WP                        ; store word and increment pointer
+0edf // 02cd:     MOV WT RP                           ; put pointer into stack top
+4938 // 02ce:     LOADI RW EP                         ; load word address
+4a39 // 02cf:     LOADI RX RW                         ; load code address
+4eca // 02d0:     JUC RX                              ; jump into word code routine
+0352 // 02d1: SYM'S STRING STR                        ; name string
+5021 // 02d2: SYM'S STRING STR                        ; name string
+02d1 // 02d3:     WORD SYM'S                          ; name pointer
+02ca // 02d4: SYM'N WORD LASTWORD                     ; link pointer
+02d6 // 02d5: SYM WORD SYM'C                          ; code pointer
+0fde // 02d6:     MOV RP WT                           ; set pointer
+4e2d // 02d7:     LOADD DST WP                        ; decrement pointer and load word
+4938 // 02d8:     LOADI RW EP                         ; load word address
+4a39 // 02d9:     LOADI RX RW                         ; load code address
+4eca // 02da:     JUC RX                              ; jump into word code routine
+0252 // 02db: SYM'S STRING STR                        ; name string
+3e00 // 02dc: SYM'S STRING STR                        ; name string
+02db // 02dd:     WORD SYM'S                          ; name pointer
+02d4 // 02de: SYM'N WORD LASTWORD                     ; link pointer
+02e0 // 02df: SYM WORD SYM'C                          ; code pointer
+4e7d // 02e0:     STORI SRC WP                        ; store word and increment pointer
+4e3f // 02e1:     LOADI DST RP                        ; load word and increment pointer
+4938 // 02e2:     LOADI RW EP                         ; load word address
+4a39 // 02e3:     LOADI RX RW                         ; load code address
+4eca // 02e4:     JUC RX                              ; jump into word code routine
+0252 // 02e5: SYM'S STRING STR                        ; name string
+4000 // 02e6: SYM'S STRING STR                        ; name string
+02e5 // 02e7:     WORD SYM'S                          ; name pointer
+02de // 02e8: SYM'N WORD LASTWORD                     ; link pointer
+02ea // 02e9: SYM WORD SYM'C                          ; code pointer
+4e7d // 02ea:     STORI SRC WP                        ; store word and increment pointer
+4e3f // 02eb:     LOADI DST RP                        ; load word and increment pointer
+4e6f // 02ec:     STORD SRC RP                        ; decrement pointer and store word
+4938 // 02ed:     LOADI RW EP                         ; load word address
+4a39 // 02ee:     LOADI RX RW                         ; load code address
+4eca // 02ef:     JUC RX                              ; jump into word code routine
+023e // 02f0: SYM'S STRING STR                        ; name string
+5200 // 02f1: SYM'S STRING STR                        ; name string
+02f0 // 02f2:     WORD SYM'S                          ; name pointer
+02e8 // 02f3: SYM'N WORD LASTWORD                     ; link pointer
+02f5 // 02f4: SYM WORD SYM'C                          ; code pointer
+4e6f // 02f5:     STORD SRC RP                        ; decrement pointer and store word
+4e2d // 02f6:     LOADD DST WP                        ; decrement pointer and load word
+4938 // 02f7:     LOADI RW EP                         ; load word address
+4a39 // 02f8:     LOADI RX RW                         ; load code address
+4eca // 02f9:     JUC RX                              ; jump into word code routine
+0441 // 02fa: SYM'S STRING STR                        ; name string
+3e43 // 02fb: SYM'S STRING STR                        ; name string
+4100 // 02fc: SYM'S STRING STR                        ; name string
+02fa // 02fd:     WORD SYM'S                          ; name pointer
+02f3 // 02fe: SYM'N WORD LASTWORD                     ; link pointer
+0300 // 02ff: SYM WORD SYM'C                          ; code pointer
+8e01 // 0300:     LSHLI WT 1                          ; get character address
+4938 // 0301:     LOADI RW EP                         ; load word address
+4a39 // 0302:     LOADI RX RW                         ; load code address
+4eca // 0303:     JUC RX                              ; jump into word code routine
+0443 // 0304: SYM'S STRING STR                        ; name string
+413e // 0305: SYM'S STRING STR                        ; name string
+4100 // 0306: SYM'S STRING STR                        ; name string
+0304 // 0307:     WORD SYM'S                          ; name pointer
+02fe // 0308: SYM'N WORD LASTWORD                     ; link pointer
+030a // 0309: SYM WORD SYM'C                          ; code pointer
+8e11 // 030a:     LSHRI WT 1                          ; get word address
+4938 // 030b:     LOADI RW EP                         ; load word address
+4a39 // 030c:     LOADI RX RW                         ; load code address
+4eca // 030d:     JUC RX                              ; jump into word code routine
+0140 // 030e: SYM'S STRING STR                        ; name string
+030e // 030f:     WORD SYM'S                          ; name pointer
+0308 // 0310: SYM'N WORD LASTWORD                     ; link pointer
+0312 // 0311: SYM WORD SYM'C                          ; code pointer
+4e0e // 0312:     LOAD WT WT                          ; load word into stack top
+4938 // 0313:     LOADI RW EP                         ; load word address
+4a39 // 0314:     LOADI RX RW                         ; load code address
+4eca // 0315:     JUC RX                              ; jump into word code routine
+0243 // 0316: SYM'S STRING STR                        ; name string
+4000 // 0317: SYM'S STRING STR                        ; name string
+0316 // 0318:     WORD SYM'S                          ; name pointer
+0310 // 0319: SYM'N WORD LASTWORD                     ; link pointer
+031b // 031a: SYM WORD SYM'C                          ; code pointer
+09de // 031b:     MOV RW WT                           ; move character address
+8911 // 031c:     LSHRI RW 1                          ; get word address
+4e09 // 031d:     LOAD WT RW                          ; load word into stack top
+c203 // 031e:     BCS CFETCH0
+8e18 // 031f:     LSHRI WT 8                          ; get upper byte
+ce02 // 0320:     BUC CFETCH1
+1eff // 0321:     ANDI WT FF                          ; get lower byte
+4938 // 0322:     LOADI RW EP                         ; load word address
+4a39 // 0323:     LOADI RX RW                         ; load code address
+4eca // 0324:     JUC RX                              ; jump into word code routine
+0232 // 0325: SYM'S STRING STR                        ; name string
+4000 // 0326: SYM'S STRING STR                        ; name string
+0325 // 0327:     WORD SYM'S                          ; name pointer
+0319 // 0328: SYM'N WORD LASTWORD                     ; link pointer
+000a // 0329: SYM WORD DOENTER                        ; code pointer
+0259 // 032a:     WORD DUP
+0421 // 032b:     WORD ONEADD
+0311 // 032c:     WORD FETCH                          ; load lower word
+0289 // 032d:     WORD SWAP
+0311 // 032e:     WORD FETCH                          ; load upper word
+01d1 // 032f:     WORD EXIT
+0121 // 0330: SYM'S STRING STR                        ; name string
+0330 // 0331:     WORD SYM'S                          ; name pointer
+0328 // 0332: SYM'N WORD LASTWORD                     ; link pointer
+0334 // 0333: SYM WORD SYM'C                          ; code pointer
+492d // 0334:     LOADD DST WP                        ; decrement pointer and load word
+494e // 0335:     STOR RW WT                          ; store word at address
+4e2d // 0336:     LOADD DST WP                        ; decrement pointer and load word
+4938 // 0337:     LOADI RW EP                         ; load word address
+4a39 // 0338:     LOADI RX RW                         ; load code address
+4eca // 0339:     JUC RX                              ; jump into word code routine
+0243 // 033a: SYM'S STRING STR                        ; name string
+2100 // 033b: SYM'S STRING STR                        ; name string
+033a // 033c:     WORD SYM'S                          ; name pointer
+0332 // 033d: SYM'N WORD LASTWORD                     ; link pointer
+033f // 033e: SYM WORD SYM'C                          ; code pointer
+492d // 033f:     LOADD DST WP                        ; decrement pointer and load word
+8e11 // 0340:     LSHRI WT 1                          ; get word address
+4a0e // 0341:     LOAD RX WT                          ; load word
+c205 // 0342:     BCS CSTORE0
+1aff // 0343:     ANDI RX FF                          ; clear upper byte
+8908 // 0344:     LSHLI RW 8                          ; shift character into upper byte
+0a29 // 0345:     OR RX RW                            ; set upper byte
+ce05 // 0346:     BUC CSTORE1
+8a18 // 0347:     LSHRI RX 8
+8a08 // 0348:     LSHLI RX 8                          ; clear lower byte
+19ff // 0349:     ANDI RW FF                          ; clear character upper byte
+0a29 // 034a:     OR RX RW                            ; set lower byte
+4a4e // 034b:     STOR RX WT                          ; store word
+4e2d // 034c:     LOADD DST WP                        ; decrement pointer and load word
+4938 // 034d:     LOADI RW EP                         ; load word address
+4a39 // 034e:     LOADI RX RW                         ; load code address
+4eca // 034f:     JUC RX                              ; jump into word code routine
+0232 // 0350: SYM'S STRING STR                        ; name string
+2100 // 0351: SYM'S STRING STR                        ; name string
+0350 // 0352:     WORD SYM'S                          ; name pointer
+033d // 0353: SYM'N WORD LASTWORD                     ; link pointer
+000a // 0354: SYM WORD DOENTER                        ; code pointer
+0289 // 0355:     WORD SWAP
+027c // 0356:     WORD OVER
+0333 // 0357:     WORD STORE                          ; store upper word
+0421 // 0358:     WORD ONEADD
+0333 // 0359:     WORD STORE                          ; store lower word
+01d1 // 035a:     WORD EXIT
+022b // 035b: SYM'S STRING STR                        ; name string
+2100 // 035c: SYM'S STRING STR                        ; name string
+035b // 035d:     WORD SYM'S                          ; name pointer
+0353 // 035e: SYM'N WORD LASTWORD                     ; link pointer
+000a // 035f: SYM WORD DOENTER                        ; code pointer
+0289 // 0360:     WORD SWAP
+027c // 0361:     WORD OVER
+0311 // 0362:     WORD FETCH                          ; fetch word
+0409 // 0363:     WORD ADD_                           ; add number
+0289 // 0364:     WORD SWAP
+0333 // 0365:     WORD STORE                          ; store word
+01d1 // 0366:     WORD EXIT
+0230 // 0367: SYM'S STRING STR                        ; name string
+3c00 // 0368: SYM'S STRING STR                        ; name string
+0367 // 0369:     WORD SYM'S                          ; name pointer
+035e // 036a: SYM'N WORD LASTWORD                     ; link pointer
+036c // 036b: SYM WORD SYM'C                          ; code pointer
+0eb0 // 036c:     CMP WT R0                           ; compare with zero
+4edd // 036d:     SGE WT                              ; set to 1 if greater or equal
+9e01 // 036e:     SUBI WT 1                           ; return to 0 if false -1 if true
+4938 // 036f:     LOADI RW EP                         ; load word address
+4a39 // 0370:     LOADI RX RW                         ; load code address
+4eca // 0371:     JUC RX                              ; jump into word code routine
+0230 // 0372: SYM'S STRING STR                        ; name string
+3d00 // 0373: SYM'S STRING STR                        ; name string
+0372 // 0374:     WORD SYM'S                          ; name pointer
+036a // 0375: SYM'N WORD LASTWORD                     ; link pointer
+0377 // 0376: SYM WORD SYM'C                          ; code pointer
+0eb0 // 0377:     CMP WT R0                           ; compare with zero
+4ed1 // 0378:     SNE WT                              ; set to 1 if not equal
+9e01 // 0379:     SUBI WT 1                           ; return 0 if false -1 if true
+4938 // 037a:     LOADI RW EP                         ; load word address
+4a39 // 037b:     LOADI RX RW                         ; load code address
+4eca // 037c:     JUC RX                              ; jump into word code routine
+013c // 037d: SYM'S STRING STR                        ; name string
+037d // 037e:     WORD SYM'S                          ; name pointer
+0375 // 037f: SYM'N WORD LASTWORD                     ; link pointer
+0381 // 0380: SYM WORD SYM'C                          ; code pointer
+492d // 0381:     LOADD DST WP                        ; decrement pointer and load word
+09be // 0382:     CMP RW WT                           ; compare operands
+4edd // 0383:     SGE WT                              ; set to 1 if greater or equal
+9e01 // 0384:     SUBI WT 1                           ; return 0 if false -1 if true
+4938 // 0385:     LOADI RW EP                         ; load word address
+4a39 // 0386:     LOADI RX RW                         ; load code address
+4eca // 0387:     JUC RX                              ; jump into word code routine
+0255 // 0388: SYM'S STRING STR                        ; name string
+3c00 // 0389: SYM'S STRING STR                        ; name string
+0388 // 038a:     WORD SYM'S                          ; name pointer
+037f // 038b: SYM'N WORD LASTWORD                     ; link pointer
+038d // 038c: SYM WORD SYM'C                          ; code pointer
+492d // 038d:     LOADD DST WP                        ; decrement pointer and load word
+09be // 038e:     CMP RW WT                           ; compare operands
+4edb // 038f:     SHS WT                              ; set to 1 if higher or same as
+9e01 // 0390:     SUBI WT 1                           ; return 0 if false -1 if true
+4938 // 0391:     LOADI RW EP                         ; load word address
+4a39 // 0392:     LOADI RX RW                         ; load code address
+4eca // 0393:     JUC RX                              ; jump into word code routine
+013d // 0394: SYM'S STRING STR                        ; name string
+0394 // 0395:     WORD SYM'S                          ; name pointer
+038b // 0396: SYM'N WORD LASTWORD                     ; link pointer
+0398 // 0397: SYM WORD SYM'C                          ; code pointer
+492d // 0398:     LOADD DST WP                        ; decrement pointer and load word
+09be // 0399:     CMP RW WT                           ; compare operands
+4ed1 // 039a:     SNE WT                              ; set to 1 if not equal
+9e01 // 039b:     SUBI WT 1                           ; return 0 if false -1 if true
+4938 // 039c:     LOADI RW EP                         ; load word address
+4a39 // 039d:     LOADI RX RW                         ; load code address
+4eca // 039e:     JUC RX                              ; jump into word code routine
+022f // 039f: SYM'S STRING STR                        ; name string
+3d00 // 03a0: SYM'S STRING STR                        ; name string
+039f // 03a1:     WORD SYM'S                          ; name pointer
+0396 // 03a2: SYM'N WORD LASTWORD                     ; link pointer
+03a4 // 03a3: SYM WORD SYM'C                          ; code pointer
+492d // 03a4:     LOADD DST WP                        ; decrement pointer and load word
+09be // 03a5:     CMP RW WT                           ; compare operands
+4ed0 // 03a6:     SEQ WT                              ; set to 1 if equal
+9e01 // 03a7:     SUBI WT 1                           ; return 0 if false -1 if true
+4938 // 03a8:     LOADI RW EP                         ; load word address
+4a39 // 03a9:     LOADI RX RW                         ; load code address
+4eca // 03aa:     JUC RX                              ; jump into word code routine
+034d // 03ab: SYM'S STRING STR                        ; name string
+494e // 03ac: SYM'S STRING STR                        ; name string
+03ab // 03ad:     WORD SYM'S                          ; name pointer
+03a2 // 03ae: SYM'N WORD LASTWORD                     ; link pointer
+000a // 03af: SYM WORD DOENTER                        ; code pointer
+0263 // 03b0:     WORD DDUP
+0289 // 03b1:     WORD SWAP
+0380 // 03b2:     WORD LESS                           ; compare words
+01fe // 03b3:     WORD ZBRANCH                        ; if first word is larger
+03b6 // 03b4:     WORD MIN0
+0289 // 03b5:     WORD SWAP                           ; then drop first word
+0245 // 03b6:     WORD DROP
+01d1 // 03b7:     WORD EXIT
+034d // 03b8: SYM'S STRING STR                        ; name string
+4158 // 03b9: SYM'S STRING STR                        ; name string
+03b8 // 03ba:     WORD SYM'S                          ; name pointer
+03ae // 03bb: SYM'N WORD LASTWORD                     ; link pointer
+000a // 03bc: SYM WORD DOENTER                        ; code pointer
+0263 // 03bd:     WORD DDUP
+0380 // 03be:     WORD LESS                           ; compare words
+01fe // 03bf:     WORD ZBRANCH                        ; if first word is smaller
+03c2 // 03c0:     WORD MAX0
+0289 // 03c1:     WORD SWAP                           ; then drop first word
+0245 // 03c2:     WORD DROP
+01d1 // 03c3:     WORD EXIT
+0657 // 03c4: SYM'S STRING STR                        ; name string
+4954 // 03c5: SYM'S STRING STR                        ; name string
+4849 // 03c6: SYM'S STRING STR                        ; name string
+4e00 // 03c7: SYM'S STRING STR                        ; name string
+03c4 // 03c8:     WORD SYM'S                          ; name pointer
+03bb // 03c9: SYM'N WORD LASTWORD                     ; link pointer
+000a // 03ca: SYM WORD DOENTER                        ; code pointer
+027c // 03cb:     WORD OVER
+0428 // 03cc:     WORD SUB_                           ; find range length
+02f4 // 03cd:     WORD RPUSH
+0428 // 03ce:     WORD SUB_                           ; find range offset
+02df // 03cf:     WORD RPOP
+038c // 03d0:     WORD ULESS                          ; check offset less than length
+01d1 // 03d1:     WORD EXIT
+0341 // 03d2: SYM'S STRING STR                        ; name string
+4e44 // 03d3: SYM'S STRING STR                        ; name string
+03d2 // 03d4:     WORD SYM'S                          ; name pointer
+03c9 // 03d5: SYM'N WORD LASTWORD                     ; link pointer
+03d7 // 03d6: SYM WORD SYM'C                          ; code pointer
+492d // 03d7:     LOADD DST WP                        ; decrement pointer and load word
+0e19 // 03d8:     AND WT RW                           ; put result into stack top
+4938 // 03d9:     LOADI RW EP                         ; load word address
+4a39 // 03da:     LOADI RX RW                         ; load code address
+4eca // 03db:     JUC RX                              ; jump into word code routine
+024f // 03dc: SYM'S STRING STR                        ; name string
+5200 // 03dd: SYM'S STRING STR                        ; name string
+03dc // 03de:     WORD SYM'S                          ; name pointer
+03d5 // 03df: SYM'N WORD LASTWORD                     ; link pointer
+03e1 // 03e0: SYM WORD SYM'C                          ; code pointer
+492d // 03e1:     LOADD DST WP                        ; decrement pointer and load word
+0e29 // 03e2:     OR WT RW                            ; put result into stack top
+4938 // 03e3:     LOADI RW EP                         ; load word address
+4a39 // 03e4:     LOADI RX RW                         ; load code address
+4eca // 03e5:     JUC RX                              ; jump into word code routine
+0358 // 03e6: SYM'S STRING STR                        ; name string
+4f52 // 03e7: SYM'S STRING STR                        ; name string
+03e6 // 03e8:     WORD SYM'S                          ; name pointer
+03df // 03e9: SYM'N WORD LASTWORD                     ; link pointer
+03eb // 03ea: SYM WORD SYM'C                          ; code pointer
+492d // 03eb:     LOADD DST WP                        ; decrement pointer and load word
+0e39 // 03ec:     XOR WT RW                           ; put result into stack top
+4938 // 03ed:     LOADI RW EP                         ; load word address
+4a39 // 03ee:     LOADI RX RW                         ; load code address
+4eca // 03ef:     JUC RX                              ; jump into word code routine
+034e // 03f0: SYM'S STRING STR                        ; name string
+4f54 // 03f1: SYM'S STRING STR                        ; name string
+03f0 // 03f2:     WORD SYM'S                          ; name pointer
+03e9 // 03f3: SYM'N WORD LASTWORD                     ; link pointer
+03f5 // 03f4: SYM WORD SYM'C                          ; code pointer
+e9ff // 03f5:     MOVSI RW -1
+0e39 // 03f6:     XOR WT RW                           ; invert bits
+4938 // 03f7:     LOADI RW EP                         ; load word address
+4a39 // 03f8:     LOADI RX RW                         ; load code address
+4eca // 03f9:     JUC RX                              ; jump into word code routine
+0355 // 03fa: SYM'S STRING STR                        ; name string
+4d2b // 03fb: SYM'S STRING STR                        ; name string
+03fa // 03fc:     WORD SYM'S                          ; name pointer
+03f3 // 03fd: SYM'N WORD LASTWORD                     ; link pointer
+03ff // 03fe: SYM WORD SYM'C                          ; code pointer
+492d // 03ff:     LOADD DST WP                        ; decrement pointer and load word
+0e59 // 0400:     ADD WT RW                           ; put result into stack top
+4e7d // 0401:     STORI SRC WP                        ; store word and increment pointer
+4ed2 // 0402:     SCS WT                              ; put carry into stack top
+4938 // 0403:     LOADI RW EP                         ; load word address
+4a39 // 0404:     LOADI RX RW                         ; load code address
+4eca // 0405:     JUC RX                              ; jump into word code routine
+012b // 0406: SYM'S STRING STR                        ; name string
+0406 // 0407:     WORD SYM'S                          ; name pointer
+03fd // 0408: SYM'N WORD LASTWORD                     ; link pointer
+040a // 0409: SYM WORD SYM'C                          ; code pointer
+492d // 040a:     LOADD DST WP                        ; decrement pointer and load word
+0e59 // 040b:     ADD WT RW                           ; put result into stack top
+4938 // 040c:     LOADI RW EP                         ; load word address
+4a39 // 040d:     LOADI RX RW                         ; load code address
+4eca // 040e:     JUC RX                              ; jump into word code routine
+0244 // 040f: SYM'S STRING STR                        ; name string
+2b00 // 0410: SYM'S STRING STR                        ; name string
+040f // 0411:     WORD SYM'S                          ; name pointer
+0408 // 0412: SYM'N WORD LASTWORD                     ; link pointer
+000a // 0413: SYM WORD DOENTER                        ; code pointer
+02f4 // 0414:     WORD RPUSH                          ; save second upper word
+0289 // 0415:     WORD SWAP
+02f4 // 0416:     WORD RPUSH                          ; save first upper word
+03fe // 0417:     WORD UMADD                          ; add lower words
+02df // 0418:     WORD RPOP                           ; restore first upper word
+02df // 0419:     WORD RPOP                           ; restore second upper word
+0409 // 041a:     WORD ADD_                           ; add carry
+0409 // 041b:     WORD ADD_                           ; add upper words
+01d1 // 041c:     WORD EXIT
+0231 // 041d: SYM'S STRING STR                        ; name string
+2b00 // 041e: SYM'S STRING STR                        ; name string
+041d // 041f:     WORD SYM'S                          ; name pointer
+0412 // 0420: SYM'N WORD LASTWORD                     ; link pointer
+000a // 0421: SYM WORD DOENTER                        ; code pointer
+02b7 // 0422:     WORD ONE
+0409 // 0423:     WORD ADD_                           ; add one
+01d1 // 0424:     WORD EXIT
+012d // 0425: SYM'S STRING STR                        ; name string
+0425 // 0426:     WORD SYM'S                          ; name pointer
+0420 // 0427: SYM'N WORD LASTWORD                     ; link pointer
+0429 // 0428: SYM WORD SYM'C                          ; code pointer
+09de // 0429:     MOV RW WT                           ; move second operand
+4e2d // 042a:     LOADD DST WP                        ; decrement pointer and load word
+0e99 // 042b:     SUB WT RW                           ; put result into stack top
+4938 // 042c:     LOADI RW EP                         ; load word address
+4a39 // 042d:     LOADI RX RW                         ; load code address
+4eca // 042e:     JUC RX                              ; jump into word code routine
+0231 // 042f: SYM'S STRING STR                        ; name string
+2d00 // 0430: SYM'S STRING STR                        ; name string
+042f // 0431:     WORD SYM'S                          ; name pointer
+0427 // 0432: SYM'N WORD LASTWORD                     ; link pointer
+000a // 0433: SYM WORD DOENTER                        ; code pointer
+02b7 // 0434:     WORD ONE
+0428 // 0435:     WORD SUB_                           ; subtract one
+01d1 // 0436:     WORD EXIT
+0655 // 0437: SYM'S STRING STR                        ; name string
+4d2f // 0438: SYM'S STRING STR                        ; name string
+4d4f // 0439: SYM'S STRING STR                        ; name string
+4400 // 043a: SYM'S STRING STR                        ; name string
+0437 // 043b:     WORD SYM'S                          ; name pointer
+0432 // 043c: SYM'N WORD LASTWORD                     ; link pointer
+043e // 043d: SYM WORD SYM'C                          ; code pointer
+4a2d // 043e:     LOADD DST WP                        ; decrement pointer and load word
+4b2d // 043f:     LOADD DST WP                        ; decrement pointer and load word
+0cde // 0440:     MOV RZ WT                           ; get divisor
+e910 // 0441:     MOVSI RW 16                         ; set loop counter
+ee00 // 0442:     MOVSI WT 0                          ; set quotient
+ce04 // 0443:     BUC UMDIVMOD1
+0b5b // 0444:     ADD RY RY                           ; left shift lower dividend
+0a7a // 0445:     ADDC RX RX                          ; left shift upper dividend
+8e01 // 0446:     LSHLI WT 1                          ; left shift quotient
+0abc // 0447:     CMP RX RZ                           ; compare remainder with divisor
+ca03 // 0448:     BLO UMDIVMOD2                       ; if less skip
+0a9c // 0449:     SUB RX RZ                           ; else subtract divisor
+5e01 // 044a:     ADDI WT 1                           ; and set quotient bit
+9901 // 044b:     SUBI RW 1                           ; decrement counter
+cdf8 // 044c:     BGE UMDIVMOD0                       ; repeat until negative
+4a7d // 044d:     STORI SRC WP                        ; store word and increment pointer
+4938 // 044e:     LOADI RW EP                         ; load word address
+4a39 // 044f:     LOADI RX RW                         ; load code address
+4eca // 0450:     JUC RX                              ; jump into word code routine
+054d // 0451: SYM'S STRING STR                        ; name string
+2f4d // 0452: SYM'S STRING STR                        ; name string
+4f44 // 0453: SYM'S STRING STR                        ; name string
+0451 // 0454:     WORD SYM'S                          ; name pointer
+043c // 0455: SYM'N WORD LASTWORD                     ; link pointer
+000a // 0456: SYM WORD DOENTER                        ; code pointer
+0263 // 0457:     WORD DDUP
+036b // 0458:     WORD ZLESS
+02f4 // 0459:     WORD RPUSH                          ; save divisor sign
+036b // 045a:     WORD ZLESS
+02f4 // 045b:     WORD RPUSH                          ; save dividend sign
+04ea // 045c:     WORD ABS                            ; make divisor positive
+02f4 // 045d:     WORD RPUSH
+04f6 // 045e:     WORD DABS                           ; make dividend positive
+02df // 045f:     WORD RPOP
+043d // 0460:     WORD UMDIVMOD                       ; divide
+02e9 // 0461:     WORD RFETCH                         ; get dividend sign
+01fe // 0462:     WORD ZBRANCH                        ; if negative
+0467 // 0463:     WORD MDIVMOD0
+0289 // 0464:     WORD SWAP
+04d2 // 0465:     WORD NEGATE                         ; then negate the remainder
+0289 // 0466:     WORD SWAP
+02df // 0467:     WORD RPOP                           ; restore dividend sign
+02df // 0468:     WORD RPOP                           ; restore divisor sign
+03a3 // 0469:     WORD NEQUAL
+01fe // 046a:     WORD ZBRANCH                        ; if signs are different
+046d // 046b:     WORD MDIVMOD1
+04d2 // 046c:     WORD NEGATE                         ; then negate quotient
+01d1 // 046d:     WORD EXIT
+042f // 046e: SYM'S STRING STR                        ; name string
+4d4f // 046f: SYM'S STRING STR                        ; name string
+4400 // 0470: SYM'S STRING STR                        ; name string
+046e // 0471:     WORD SYM'S                          ; name pointer
+0455 // 0472: SYM'N WORD LASTWORD                     ; link pointer
+000a // 0473: SYM WORD DOENTER                        ; code pointer
+027c // 0474:     WORD OVER
+036b // 0475:     WORD ZLESS                          ; extend dividend sign
+0289 // 0476:     WORD SWAP
+0456 // 0477:     WORD MDIVMOD                        ; divide
+01d1 // 0478:     WORD EXIT
+034d // 0479: SYM'S STRING STR                        ; name string
+4f44 // 047a: SYM'S STRING STR                        ; name string
+0479 // 047b:     WORD SYM'S                          ; name pointer
+0472 // 047c: SYM'N WORD LASTWORD                     ; link pointer
+000a // 047d: SYM WORD DOENTER                        ; code pointer
+0473 // 047e:     WORD DIVMOD                         ; divide
+0245 // 047f:     WORD DROP                           ; drop quotient
+01d1 // 0480:     WORD EXIT
+012f // 0481: SYM'S STRING STR                        ; name string
+0481 // 0482:     WORD SYM'S                          ; name pointer
+047c // 0483: SYM'N WORD LASTWORD                     ; link pointer
+000a // 0484: SYM WORD DOENTER                        ; code pointer
+0473 // 0485:     WORD DIVMOD                         ; divide
+0289 // 0486:     WORD SWAP
+0245 // 0487:     WORD DROP                           ; drop remainder
+01d1 // 0488:     WORD EXIT
+0355 // 0489: SYM'S STRING STR                        ; name string
+4d2a // 048a: SYM'S STRING STR                        ; name string
+0489 // 048b:     WORD SYM'S                          ; name pointer
+0483 // 048c: SYM'N WORD LASTWORD                     ; link pointer
+048e // 048d: SYM WORD SYM'C                          ; code pointer
+4a2d // 048e:     LOADD DST WP                        ; decrement pointer and load word
+0bde // 048f:     MOV RY WT                           ; get multiplier
+ec0f // 0490:     MOVSI RZ 15                         ; set loop counter
+e900 // 0491:     MOVSI RW 0                          ; set lower product
+ee00 // 0492:     MOVSI WT 0                          ; set upper product
+0959 // 0493:     ADD RW RW                           ; left shift lower product
+0e7e // 0494:     ADDC WT WT                          ; left shift upper product
+8b01 // 0495:     LSHLI RY 1                          ; left shift multiplier
+c303 // 0496:     BCC UMMUL1                          ; if bit is zero skip
+095a // 0497:     ADD RW RX                           ; else add multiplicand
+0e70 // 0498:     ADDC WT R0                          ; and propagate carry
+9c01 // 0499:     SUBI RZ 1                           ; decrement counter
+cdf9 // 049a:     BGE UMMUL0                          ; repeat until negative
+497d // 049b:     STORI SRC WP                        ; store word and increment pointer
+4938 // 049c:     LOADI RW EP                         ; load word address
+4a39 // 049d:     LOADI RX RW                         ; load code address
+4eca // 049e:     JUC RX                              ; jump into word code routine
+012a // 049f: SYM'S STRING STR                        ; name string
+049f // 04a0:     WORD SYM'S                          ; name pointer
+048c // 04a1: SYM'N WORD LASTWORD                     ; link pointer
+000a // 04a2: SYM WORD DOENTER                        ; code pointer
+048d // 04a3:     WORD UMMUL
+0245 // 04a4:     WORD DROP                           ; drop upper result
+01d1 // 04a5:     WORD EXIT
+024d // 04a6: SYM'S STRING STR                        ; name string
+2a00 // 04a7: SYM'S STRING STR                        ; name string
+04a6 // 04a8:     WORD SYM'S                          ; name pointer
+04a1 // 04a9: SYM'N WORD LASTWORD                     ; link pointer
+000a // 04aa: SYM WORD DOENTER                        ; code pointer
+0263 // 04ab:     WORD DDUP
+03ea // 04ac:     WORD XOR_
+036b // 04ad:     WORD ZLESS                          ; compare signs
+02f4 // 04ae:     WORD RPUSH                          ; save comparison
+04ea // 04af:     WORD ABS                            ; make operand positive
+0289 // 04b0:     WORD SWAP
+04ea // 04b1:     WORD ABS                            ; make operand positive
+048d // 04b2:     WORD UMMUL                          ; unsigned multiply
+02df // 04b3:     WORD RPOP                           ; restore comparison
+01fe // 04b4:     WORD ZBRANCH                        ; if signs were equal exit
+04b7 // 04b5:     WORD MMUL0
+04dd // 04b6:     WORD DNEGATE                        ; else negate result
+01d1 // 04b7:     WORD EXIT
+052a // 04b8: SYM'S STRING STR                        ; name string
+2f4d // 04b9: SYM'S STRING STR                        ; name string
+4f44 // 04ba: SYM'S STRING STR                        ; name string
+04b8 // 04bb:     WORD SYM'S                          ; name pointer
+04a9 // 04bc: SYM'N WORD LASTWORD                     ; link pointer
+000a // 04bd: SYM WORD DOENTER                        ; code pointer
+02f4 // 04be:     WORD RPUSH                          ; save denominator
+04aa // 04bf:     WORD MMUL                           ; multiply numerator
+02df // 04c0:     WORD RPOP                           ; restore denominator
+0456 // 04c1:     WORD MDIVMOD                        ; divide by denominator
+01d1 // 04c2:     WORD EXIT
+022a // 04c3: SYM'S STRING STR                        ; name string
+2f00 // 04c4: SYM'S STRING STR                        ; name string
+04c3 // 04c5:     WORD SYM'S                          ; name pointer
+04bc // 04c6: SYM'N WORD LASTWORD                     ; link pointer
+000a // 04c7: SYM WORD DOENTER                        ; code pointer
+04bd // 04c8:     WORD MULDIVMOD                      ; scale
+0289 // 04c9:     WORD SWAP
+0245 // 04ca:     WORD DROP                           ; drop remainder
+01d1 // 04cb:     WORD EXIT
+064e // 04cc: SYM'S STRING STR                        ; name string
+4547 // 04cd: SYM'S STRING STR                        ; name string
+4154 // 04ce: SYM'S STRING STR                        ; name string
+4500 // 04cf: SYM'S STRING STR                        ; name string
+04cc // 04d0:     WORD SYM'S                          ; name pointer
+04c6 // 04d1: SYM'N WORD LASTWORD                     ; link pointer
+000a // 04d2: SYM WORD DOENTER                        ; code pointer
+03f4 // 04d3:     WORD NOT                            ; invert word
+02b7 // 04d4:     WORD ONE
+0409 // 04d5:     WORD ADD_                           ; add one
+01d1 // 04d6:     WORD EXIT
+0744 // 04d7: SYM'S STRING STR                        ; name string
+4e45 // 04d8: SYM'S STRING STR                        ; name string
+4741 // 04d9: SYM'S STRING STR                        ; name string
+5445 // 04da: SYM'S STRING STR                        ; name string
+04d7 // 04db:     WORD SYM'S                          ; name pointer
+04d1 // 04dc: SYM'N WORD LASTWORD                     ; link pointer
+000a // 04dd: SYM WORD DOENTER                        ; code pointer
+03f4 // 04de:     WORD NOT                            ; invert upper word
+02f4 // 04df:     WORD RPUSH                          ; save upper word
+03f4 // 04e0:     WORD NOT                            ; invert lower word
+02b7 // 04e1:     WORD ONE
+03fe // 04e2:     WORD UMADD                          ; add one
+02df // 04e3:     WORD RPOP                           ; restore upper word
+0409 // 04e4:     WORD ADD_                           ; add carry
+01d1 // 04e5:     WORD EXIT
+0341 // 04e6: SYM'S STRING STR                        ; name string
+4253 // 04e7: SYM'S STRING STR                        ; name string
+04e6 // 04e8:     WORD SYM'S                          ; name pointer
+04dc // 04e9: SYM'N WORD LASTWORD                     ; link pointer
+000a // 04ea: SYM WORD DOENTER                        ; code pointer
+0259 // 04eb:     WORD DUP
+036b // 04ec:     WORD ZLESS
+01fe // 04ed:     WORD ZBRANCH                        ; if not negative exit
+04f0 // 04ee:     WORD ABS0
+04d2 // 04ef:     WORD NEGATE                         ; else negate word
+01d1 // 04f0:     WORD EXIT
+0444 // 04f1: SYM'S STRING STR                        ; name string
+4142 // 04f2: SYM'S STRING STR                        ; name string
+5300 // 04f3: SYM'S STRING STR                        ; name string
+04f1 // 04f4:     WORD SYM'S                          ; name pointer
+04e9 // 04f5: SYM'N WORD LASTWORD                     ; link pointer
+000a // 04f6: SYM WORD DOENTER                        ; code pointer
+0259 // 04f7:     WORD DUP
+036b // 04f8:     WORD ZLESS
+01fe // 04f9:     WORD ZBRANCH                        ; if not negative exit
+04fc // 04fa:     WORD DABS0
+04dd // 04fb:     WORD DNEGATE                        ; else negate double word
+01d1 // 04fc:     WORD EXIT
+0446 // 04fd: SYM'S STRING STR                        ; name string
+5055 // 04fe: SYM'S STRING STR                        ; name string
+2100 // 04ff: SYM'S STRING STR                        ; name string
+04fd // 0500:     WORD SYM'S                          ; name pointer
+04f5 // 0501: SYM'N WORD LASTWORD                     ; link pointer
+0503 // 0502: SYM WORD SYM'C                          ; code pointer
+492d // 0503:     LOADD DST WP                        ; decrement pointer and load word
+06d9 // 0504:     MOV F0 RW                           ; give first operand to FPU
+07de // 0505:     MOV F1 WT                           ; give second operand to FPU
+4e2d // 0506:     LOADD DST WP                        ; decrement pointer and load word
+4938 // 0507:     LOADI RW EP                         ; load word address
+4a39 // 0508:     LOADI RX RW                         ; load code address
+4eca // 0509:     JUC RX                              ; jump into word code routine
+0744 // 050a: SYM'S STRING STR                        ; name string
+4543 // 050b: SYM'S STRING STR                        ; name string
+494d // 050c: SYM'S STRING STR                        ; name string
+414c // 050d: SYM'S STRING STR                        ; name string
+050a // 050e:     WORD SYM'S                          ; name pointer
+0501 // 050f: SYM'N WORD LASTWORD                     ; link pointer
+000a // 0510: SYM WORD DOENTER                        ; code pointer
+01e7 // 0511:     WORD LITERAL
+000a // 0512:     WORD 10
+0056 // 0513:     WORD BASE_
+0333 // 0514:     WORD STORE                          ; store base
+01d1 // 0515:     WORD EXIT
+0348 // 0516: SYM'S STRING STR                        ; name string
+4558 // 0517: SYM'S STRING STR                        ; name string
+0516 // 0518:     WORD SYM'S                          ; name pointer
+050f // 0519: SYM'N WORD LASTWORD                     ; link pointer
+000a // 051a: SYM WORD DOENTER                        ; code pointer
+01e7 // 051b:     WORD LITERAL
+0010 // 051c:     WORD 16
+0056 // 051d:     WORD BASE_
+0333 // 051e:     WORD STORE                          ; store base
+01d1 // 051f:     WORD EXIT
+0544 // 0520: SYM'S STRING STR                        ; name string
+4947 // 0521: SYM'S STRING STR                        ; name string
+4954 // 0522: SYM'S STRING STR                        ; name string
+0520 // 0523:     WORD SYM'S                          ; name pointer
+0519 // 0524: SYM'N WORD LASTWORD                     ; link pointer
+000a // 0525: SYM WORD DOENTER                        ; code pointer
+01e7 // 0526:     WORD LITERAL
+0009 // 0527:     WORD 9
+027c // 0528:     WORD OVER
+0380 // 0529:     WORD LESS                           ; check if greater than 9
+01e7 // 052a:     WORD LITERAL
+0007 // 052b:     WORD 7                              ; offset from ':' to 'A'
+03d6 // 052c:     WORD AND_                           ; if greater keep offset
+0409 // 052d:     WORD ADD_                           ; add offset
+01e7 // 052e:     WORD LITERAL
+0030 // 052f:     WORD 48                             ; offset to ASCII '0'
+0409 // 0530:     WORD ADD_                           ; add offset
+01d1 // 0531:     WORD EXIT
+0745 // 0532: SYM'S STRING STR                        ; name string
+5854 // 0533: SYM'S STRING STR                        ; name string
+5241 // 0534: SYM'S STRING STR                        ; name string
+4354 // 0535: SYM'S STRING STR                        ; name string
+0532 // 0536:     WORD SYM'S                          ; name pointer
+0524 // 0537: SYM'N WORD LASTWORD                     ; link pointer
+000a // 0538: SYM WORD DOENTER                        ; code pointer
+02ae // 0539:     WORD ZERO
+0289 // 053a:     WORD SWAP                           ; extend zeros
+043d // 053b:     WORD UMDIVMOD                       ; divide
+0289 // 053c:     WORD SWAP                           ; keep quotient
+0525 // 053d:     WORD DIGIT                          ; convert remainder to digit
+01d1 // 053e:     WORD EXIT
+0350 // 053f: SYM'S STRING STR                        ; name string
+4144 // 0540: SYM'S STRING STR                        ; name string
+053f // 0541:     WORD SYM'S                          ; name pointer
+0537 // 0542: SYM'N WORD LASTWORD                     ; link pointer
+000a // 0543: SYM WORD DOENTER                        ; code pointer
+005d // 0544:     WORD HERE_                          ; get end of dictionary
+0311 // 0545:     WORD FETCH
+02ff // 0546:     WORD ATOCA                          ; convert to character address
+01e7 // 0547:     WORD LITERAL
+0050 // 0548:     WORD 80                             ; pad buffer length
+0409 // 0549:     WORD ADD_                           ; add offset
+01d1 // 054a:     WORD EXIT
+023c // 054b: SYM'S STRING STR                        ; name string
+2300 // 054c: SYM'S STRING STR                        ; name string
+054b // 054d:     WORD SYM'S                          ; name pointer
+0542 // 054e: SYM'N WORD LASTWORD                     ; link pointer
+000a // 054f: SYM WORD DOENTER                        ; code pointer
+0543 // 0550:     WORD PAD                            ; get end of pad buffer
+006a // 0551:     WORD HLD
+0333 // 0552:     WORD STORE                          ; reset output pointer
+01d1 // 0553:     WORD EXIT
+0448 // 0554: SYM'S STRING STR                        ; name string
+4f4c // 0555: SYM'S STRING STR                        ; name string
+4400 // 0556: SYM'S STRING STR                        ; name string
+0554 // 0557:     WORD SYM'S                          ; name pointer
+054e // 0558: SYM'N WORD LASTWORD                     ; link pointer
+000a // 0559: SYM WORD DOENTER                        ; code pointer
+006a // 055a:     WORD HLD
+0311 // 055b:     WORD FETCH
+02b7 // 055c:     WORD ONE
+0428 // 055d:     WORD SUB_                           ; decrement output pointer
+0259 // 055e:     WORD DUP
+006a // 055f:     WORD HLD
+0333 // 0560:     WORD STORE                          ; update output pointer
+033e // 0561:     WORD CSTORE                         ; store character
+01d1 // 0562:     WORD EXIT
+0123 // 0563: SYM'S STRING STR                        ; name string
+0563 // 0564:     WORD SYM'S                          ; name pointer
+0558 // 0565: SYM'N WORD LASTWORD                     ; link pointer
+000a // 0566: SYM WORD DOENTER                        ; code pointer
+0056 // 0567:     WORD BASE_
+0311 // 0568:     WORD FETCH
+0538 // 0569:     WORD EXTRACT                        ; extract digit
+0559 // 056a:     WORD HOLD                           ; insert digit into output
+01d1 // 056b:     WORD EXIT
+0223 // 056c: SYM'S STRING STR                        ; name string
+5300 // 056d: SYM'S STRING STR                        ; name string
+056c // 056e:     WORD SYM'S                          ; name pointer
+0565 // 056f: SYM'N WORD LASTWORD                     ; link pointer
+000a // 0570: SYM WORD DOENTER                        ; code pointer
+0566 // 0571:     WORD NUM                            ; insert digit
+0259 // 0572:     WORD DUP
+01fe // 0573:     WORD ZBRANCH                        ; if zero exit
+0577 // 0574:     WORD NUMALL1
+01f3 // 0575:     WORD BRANCH                         ; else repeat
+0571 // 0576:     WORD NUMALL0
+01d1 // 0577:     WORD EXIT
+0453 // 0578: SYM'S STRING STR                        ; name string
+4947 // 0579: SYM'S STRING STR                        ; name string
+4e00 // 057a: SYM'S STRING STR                        ; name string
+0578 // 057b:     WORD SYM'S                          ; name pointer
+056f // 057c: SYM'N WORD LASTWORD                     ; link pointer
+000a // 057d: SYM WORD DOENTER                        ; code pointer
+036b // 057e:     WORD ZLESS
+01fe // 057f:     WORD ZBRANCH                        ; if negative
+0584 // 0580:     WORD SIGN0
+01e7 // 0581:     WORD LITERAL
+002d // 0582:     WORD 2D
+0559 // 0583:     WORD HOLD                           ; then insert minus sign
+01d1 // 0584:     WORD EXIT
+0223 // 0585: SYM'S STRING STR                        ; name string
+3e00 // 0586: SYM'S STRING STR                        ; name string
+0585 // 0587:     WORD SYM'S                          ; name pointer
+057c // 0588: SYM'N WORD LASTWORD                     ; link pointer
+000a // 0589: SYM WORD DOENTER                        ; code pointer
+0245 // 058a:     WORD DROP
+006a // 058b:     WORD HLD
+0311 // 058c:     WORD FETCH                          ; get output end
+0543 // 058d:     WORD PAD                            ; get output start
+027c // 058e:     WORD OVER
+0428 // 058f:     WORD SUB_                           ; get string length
+01d1 // 0590:     WORD EXIT
+0453 // 0591: SYM'S STRING STR                        ; name string
+5354 // 0592: SYM'S STRING STR                        ; name string
+5200 // 0593: SYM'S STRING STR                        ; name string
+0591 // 0594:     WORD SYM'S                          ; name pointer
+0588 // 0595: SYM'N WORD LASTWORD                     ; link pointer
+000a // 0596: SYM WORD DOENTER                        ; code pointer
+0259 // 0597:     WORD DUP
+02f4 // 0598:     WORD RPUSH                          ; save word
+04ea // 0599:     WORD ABS                            ; get absolute value
+054f // 059a:     WORD NUMSTART
+0570 // 059b:     WORD NUMALL                         ; convert digits
+02df // 059c:     WORD RPOP
+057d // 059d:     WORD SIGN                           ; add sign
+0589 // 059e:     WORD NUMEND
+01d1 // 059f:     WORD EXIT
+0253 // 05a0: SYM'S STRING STR                        ; name string
+2e00 // 05a1: SYM'S STRING STR                        ; name string
+05a0 // 05a2:     WORD SYM'S                          ; name pointer
+0595 // 05a3: SYM'N WORD LASTWORD                     ; link pointer
+000a // 05a4: SYM WORD DOENTER                        ; code pointer
+0596 // 05a5:     WORD SSTR
+0137 // 05a6:     WORD SPACE                          ; output leading space
+019a // 05a7:     WORD TYPE                           ; output numeric string
+01d1 // 05a8:     WORD EXIT
+0353 // 05a9: SYM'S STRING STR                        ; name string
+2e52 // 05aa: SYM'S STRING STR                        ; name string
+05a9 // 05ab:     WORD SYM'S                          ; name pointer
+05a3 // 05ac: SYM'N WORD LASTWORD                     ; link pointer
+000a // 05ad: SYM WORD DOENTER                        ; code pointer
+02f4 // 05ae:     WORD RPUSH                          ; save column width
+0596 // 05af:     WORD SSTR                           ; get string
+02df // 05b0:     WORD RPOP                           ; restore column width
+027c // 05b1:     WORD OVER
+0428 // 05b2:     WORD SUB_                           ; subtract string width
+0141 // 05b3:     WORD SPACES_                        ; output leading spaces
+019a // 05b4:     WORD TYPE                           ; output string
+01d1 // 05b5:     WORD EXIT
+0455 // 05b6: SYM'S STRING STR                        ; name string
+5354 // 05b7: SYM'S STRING STR                        ; name string
+5200 // 05b8: SYM'S STRING STR                        ; name string
+05b6 // 05b9:     WORD SYM'S                          ; name pointer
+05ac // 05ba: SYM'N WORD LASTWORD                     ; link pointer
+000a // 05bb: SYM WORD DOENTER                        ; code pointer
+054f // 05bc:     WORD NUMSTART
+0570 // 05bd:     WORD NUMALL                         ; convert digits
+0589 // 05be:     WORD NUMEND
+01d1 // 05bf:     WORD EXIT
+0255 // 05c0: SYM'S STRING STR                        ; name string
+2e00 // 05c1: SYM'S STRING STR                        ; name string
+05c0 // 05c2:     WORD SYM'S                          ; name pointer
+05ba // 05c3: SYM'N WORD LASTWORD                     ; link pointer
+000a // 05c4: SYM WORD DOENTER                        ; code pointer
+05bb // 05c5:     WORD USTR
+0137 // 05c6:     WORD SPACE                          ; output leading space
+019a // 05c7:     WORD TYPE                           ; output numeric string
+01d1 // 05c8:     WORD EXIT
+0355 // 05c9: SYM'S STRING STR                        ; name string
+2e52 // 05ca: SYM'S STRING STR                        ; name string
+05c9 // 05cb:     WORD SYM'S                          ; name pointer
+05c3 // 05cc: SYM'N WORD LASTWORD                     ; link pointer
+000a // 05cd: SYM WORD DOENTER                        ; code pointer
+02f4 // 05ce:     WORD RPUSH                          ; save column width
+05bb // 05cf:     WORD USTR                           ; get string
+02df // 05d0:     WORD RPOP                           ; restore column width
+027c // 05d1:     WORD OVER
+0428 // 05d2:     WORD SUB_                           ; subtract string width
+0141 // 05d3:     WORD SPACES_                        ; output leading spaces
+019a // 05d4:     WORD TYPE                           ; output string
+01d1 // 05d5:     WORD EXIT
+012e // 05d6: SYM'S STRING STR                        ; name string
+05d6 // 05d7:     WORD SYM'S                          ; name pointer
+05cc // 05d8: SYM'N WORD LASTWORD                     ; link pointer
+000a // 05d9: SYM WORD DOENTER                        ; code pointer
+0056 // 05da:     WORD BASE_
+0311 // 05db:     WORD FETCH                          ; get current numeric base
+01e7 // 05dc:     WORD LITERAL
+000a // 05dd:     WORD 10
+0397 // 05de:     WORD EQUAL
+01fe // 05df:     WORD ZBRANCH                        ; if numeric base is 10
+05e3 // 05e0:     WORD OUTPUT0
+05a4 // 05e1:     WORD SOUTPUT                        ; then output signed word
+01d1 // 05e2:     WORD EXIT
+05c4 // 05e3:     WORD UOUTPUT                        ; else output unsigned word
+01d1 // 05e4:     WORD EXIT
+022e // 05e5: SYM'S STRING STR                        ; name string
+5200 // 05e6: SYM'S STRING STR                        ; name string
+05e5 // 05e7:     WORD SYM'S                          ; name pointer
+05d8 // 05e8: SYM'N WORD LASTWORD                     ; link pointer
+000a // 05e9: SYM WORD DOENTER                        ; code pointer
+0056 // 05ea:     WORD BASE_
+0311 // 05eb:     WORD FETCH                          ; get current numeric base
+01e7 // 05ec:     WORD LITERAL
+000a // 05ed:     WORD 10
+0397 // 05ee:     WORD EQUAL
+01fe // 05ef:     WORD ZBRANCH                        ; if numeric base is 10
+05f3 // 05f0:     WORD OUTPUTR0
+05ad // 05f1:     WORD SOUTPUTR                       ; then output signed word
+01d1 // 05f2:     WORD EXIT
+05cd // 05f3:     WORD UOUTPUTR                       ; else output unsigned word
+01d1 // 05f4:     WORD EXIT
+013f // 05f5: SYM'S STRING STR                        ; name string
+05f5 // 05f6:     WORD SYM'S                          ; name pointer
+05e8 // 05f7: SYM'N WORD LASTWORD                     ; link pointer
+000a // 05f8: SYM WORD DOENTER                        ; code pointer
+0311 // 05f9:     WORD FETCH                          ; get word
+05d9 // 05fa:     WORD OUTPUT                         ; output word
+01d1 // 05fb:     WORD EXIT
+0344 // 05fc: SYM'S STRING STR                        ; name string
+4d2b // 05fd: SYM'S STRING STR                        ; name string
+05fc // 05fe:     WORD SYM'S                          ; name pointer
+05f7 // 05ff: SYM'N WORD LASTWORD                     ; link pointer
+000a // 0600: SYM WORD DOENTER                        ; code pointer
+027c // 0601:     WORD OVER
+01e7 // 0602:     WORD LITERAL
+0004 // 0603:     WORD 4
+05cd // 0604:     WORD UOUTPUTR                       ; output address
+0137 // 0605:     WORD SPACE
+02f4 // 0606:     WORD RPUSH                          ; setup loop counter
+01f3 // 0607:     WORD BRANCH
+060f // 0608:     WORD DMP1
+0259 // 0609:     WORD DUP
+031a // 060a:     WORD CFETCH                         ; get byte
+01e7 // 060b:     WORD LITERAL
+0003 // 060c:     WORD 3
+05cd // 060d:     WORD UOUTPUTR                       ; output byte
+0421 // 060e:     WORD ONEADD                         ; increment pointer
+020b // 060f:     WORD LNEXT
+0609 // 0610:     WORD DMP0
+01d1 // 0611:     WORD EXIT
+0444 // 0612: SYM'S STRING STR                        ; name string
+554d // 0613: SYM'S STRING STR                        ; name string
+5000 // 0614: SYM'S STRING STR                        ; name string
+0612 // 0615:     WORD SYM'S                          ; name pointer
+05ff // 0616: SYM'N WORD LASTWORD                     ; link pointer
+000a // 0617: SYM WORD DOENTER                        ; code pointer
+0056 // 0618:     WORD BASE_
+0311 // 0619:     WORD FETCH
+02f4 // 061a:     WORD RPUSH                          ; save current base
+051a // 061b:     WORD HEX                            ; set base to 16
+01e7 // 061c:     WORD LITERAL
+0010 // 061d:     WORD 16                             ; output 16 bytes per line
+0484 // 061e:     WORD DIV
+02f4 // 061f:     WORD RPUSH                          ; setup loop counter
+012c // 0620:     WORD LINE
+01e7 // 0621:     WORD LITERAL
+0010 // 0622:     WORD 16
+0263 // 0623:     WORD DDUP
+0600 // 0624:     WORD DMP                            ; output bytes
+02a2 // 0625:     WORD NROT
+0137 // 0626:     WORD SPACE
+0137 // 0627:     WORD SPACE
+01bf // 0628:     WORD DTYPE                          ; output characters
+020b // 0629:     WORD LNEXT
+0620 // 062a:     WORD DUMP0
+0245 // 062b:     WORD DROP                           ; drop address
+02df // 062c:     WORD RPOP
+0056 // 062d:     WORD BASE_
+0333 // 062e:     WORD STORE                          ; restore base
+01d1 // 062f:     WORD EXIT
+0420 // 0630: WSTACKSTR STRING " <WP"
+3c57 // 0631: WSTACKSTR STRING " <WP"
+5000 // 0632: WSTACKSTR STRING " <WP"
+032e // 0633: SYM'S STRING STR                        ; name string
+5753 // 0634: SYM'S STRING STR                        ; name string
+0633 // 0635:     WORD SYM'S                          ; name pointer
+0616 // 0636: SYM'N WORD LASTWORD                     ; link pointer
+000a // 0637: SYM WORD DOENTER                        ; code pointer
+022e // 0638:     WORD DEPTH                          ; get stack depth
+02f4 // 0639:     WORD RPUSH                          ; setup loop counter
+01f3 // 063a:     WORD BRANCH
+063f // 063b:     WORD OWSTACK1
+02e9 // 063c:     WORD RFETCH                         ; get loop index
+0238 // 063d:     WORD PICK                           ; get word at index
+05d9 // 063e:     WORD OUTPUT                         ; output word
+020b // 063f:     WORD LNEXT
+063c // 0640:     WORD OWSTACK0
+01e7 // 0641:     WORD LITERAL
+0630 // 0642:     WORD WSTACKSTR
+014e // 0643:     WORD COUNT
+019a // 0644:     WORD TYPE                           ; output stack pointer string
+01d1 // 0645:     WORD EXIT
+052e // 0646: SYM'S STRING STR                        ; name string
+4241 // 0647: SYM'S STRING STR                        ; name string
+5345 // 0648: SYM'S STRING STR                        ; name string
+0646 // 0649:     WORD SYM'S                          ; name pointer
+0636 // 064a: SYM'N WORD LASTWORD                     ; link pointer
+000a // 064b: SYM WORD DOENTER                        ; code pointer
+0056 // 064c:     WORD BASE_
+0311 // 064d:     WORD FETCH                          ; get base
+0510 // 064e:     WORD DECIMAL                        ; set to base 10
+0259 // 064f:     WORD DUP
+05d9 // 0650:     WORD OUTPUT                         ; output base
+0056 // 0651:     WORD BASE_
+0333 // 0652:     WORD STORE                          ; restore base
+01d1 // 0653:     WORD EXIT
+052e // 0654: SYM'S STRING STR                        ; name string
+4652 // 0655: SYM'S STRING STR                        ; name string
+4545 // 0656: SYM'S STRING STR                        ; name string
+0654 // 0657:     WORD SYM'S                          ; name pointer
+064a // 0658: SYM'N WORD LASTWORD                     ; link pointer
+000a // 0659: SYM WORD DOENTER                        ; code pointer
+001d // 065a:     WORD WP0_
+005d // 065b:     WORD HERE_
+0311 // 065c:     WORD FETCH
+0428 // 065d:     WORD SUB_                           ; get free words
+05d9 // 065e:     WORD OUTPUT                         ; output number
+01d1 // 065f:     WORD EXIT
+062e // 0660: SYM'S STRING STR                        ; name string
+574f // 0661: SYM'S STRING STR                        ; name string
+5244 // 0662: SYM'S STRING STR                        ; name string
+5300 // 0663: SYM'S STRING STR                        ; name string
+0660 // 0664:     WORD SYM'S                          ; name pointer
+0658 // 0665: SYM'N WORD LASTWORD                     ; link pointer
+000a // 0666: SYM WORD DOENTER                        ; code pointer
+0064 // 0667:     WORD LAST
+0311 // 0668:     WORD FETCH                          ; get the last defined word
+01f3 // 0669:     WORD BRANCH
+0671 // 066a:     WORD OWORDS1
+0259 // 066b:     WORD DUP
+073b // 066c:     WORD TONAME                         ; get word name
+014e // 066d:     WORD COUNT
+0137 // 066e:     WORD SPACE                          ; output space
+019a // 066f:     WORD TYPE                           ; output name
+0744 // 0670:     WORD TONEXT                         ; get next word
+0259 // 0671:     WORD DUP
+02ae // 0672:     WORD ZERO
+0397 // 0673:     WORD EQUAL
+01fe // 0674:     WORD ZBRANCH                        ; if word is zero exit
+066b // 0675:     WORD OWORDS0
+0245 // 0676:     WORD DROP
+01d1 // 0677:     WORD EXIT
+0350 // 0678: SYM'S STRING STR                        ; name string
+5554 // 0679: SYM'S STRING STR                        ; name string
+0678 // 067a:     WORD SYM'S                          ; name pointer
+0665 // 067b: SYM'N WORD LASTWORD                     ; link pointer
+000a // 067c: SYM WORD DOENTER                        ; code pointer
+0259 // 067d:     WORD DUP
+0077 // 067e:     WORD NUMTIB
+0311 // 067f:     WORD FETCH                          ; get current number of input characters
+0259 // 0680:     WORD DUP
+01e7 // 0681:     WORD LITERAL
+0050 // 0682:     WORD 80
+03a3 // 0683:     WORD NEQUAL
+01fe // 0684:     WORD ZBRANCH                        ; if less than 80
+068b // 0685:     WORD PUT0
+02b7 // 0686:     WORD ONE
+0077 // 0687:     WORD NUMTIB
+035f // 0688:     WORD ADDSTORE                       ; then increment number of characters
+01f3 // 0689:     WORD BRANCH
+068d // 068a:     WORD PUT1
+0084 // 068b:     WORD BS
+00cf // 068c:     WORD EMIT                           ; emit backspace
+0070 // 068d:     WORD PIN
+0311 // 068e:     WORD FETCH
+0409 // 068f:     WORD ADD_
+033e // 0690:     WORD CSTORE                         ; store character in input buffer
+00cf // 0691:     WORD EMIT                           ; output character
+01d1 // 0692:     WORD EXIT
+0642 // 0693: SYM'S STRING STR                        ; name string
+4143 // 0694: SYM'S STRING STR                        ; name string
+4b53 // 0695: SYM'S STRING STR                        ; name string
+5000 // 0696: SYM'S STRING STR                        ; name string
+0693 // 0697:     WORD SYM'S                          ; name pointer
+067b // 0698: SYM'N WORD LASTWORD                     ; link pointer
+000a // 0699: SYM WORD DOENTER                        ; code pointer
+0077 // 069a:     WORD NUMTIB
+0311 // 069b:     WORD FETCH                          ; get current number of input character
+02ae // 069c:     WORD ZERO
+03a3 // 069d:     WORD NEQUAL
+01fe // 069e:     WORD ZBRANCH                        ; if not zero
+06a9 // 069f:     WORD BACKSP0
+02c1 // 06a0:     WORD NONE
+0077 // 06a1:     WORD NUMTIB
+035f // 06a2:     WORD ADDSTORE                       ; then decrement number of characters
+0084 // 06a3:     WORD BS
+00cf // 06a4:     WORD EMIT                           ; and emit backspace
+0096 // 06a5:     WORD SP
+00cf // 06a6:     WORD EMIT                           ; and emit space
+0084 // 06a7:     WORD BS
+00cf // 06a8:     WORD EMIT                           ; and emit backspace
+01d1 // 06a9:     WORD EXIT
+0649 // 06aa: SYM'S STRING STR                        ; name string
+4e4c // 06ab: SYM'S STRING STR                        ; name string
+494e // 06ac: SYM'S STRING STR                        ; name string
+4500 // 06ad: SYM'S STRING STR                        ; name string
+06aa // 06ae:     WORD SYM'S                          ; name pointer
+0698 // 06af: SYM'N WORD LASTWORD                     ; link pointer
+000a // 06b0: SYM WORD DOENTER                        ; code pointer
+02ae // 06b1:     WORD ZERO
+0077 // 06b2:     WORD NUMTIB
+0333 // 06b3:     WORD STORE                          ; reset #TIB
+002f // 06b4:     WORD TIB
+02ff // 06b5:     WORD ATOCA
+0070 // 06b6:     WORD PIN
+0333 // 06b7:     WORD STORE                          ; reset >IN
+00a9 // 06b8:     WORD KEY
+0259 // 06b9:     WORD DUP
+0084 // 06ba:     WORD BS
+0397 // 06bb:     WORD EQUAL
+01fe // 06bc:     WORD ZBRANCH                        ; if key was backspace
+06c2 // 06bd:     WORD INLINE1
+0245 // 06be:     WORD DROP
+0699 // 06bf:     WORD BACKSP                         ; then input backspace
+01f3 // 06c0:     WORD BRANCH                         ; and get next input
+06b8 // 06c1:     WORD INLINE0
+0259 // 06c2:     WORD DUP
+0090 // 06c3:     WORD CR
+0397 // 06c4:     WORD EQUAL
+01fe // 06c5:     WORD ZBRANCH                        ; if key was carriage return
+06d2 // 06c6:     WORD INLINE2
+0245 // 06c7:     WORD DROP
+0096 // 06c8:     WORD SP
+067c // 06c9:     WORD PUT                            ; then put a space in the input
+0090 // 06ca:     WORD CR
+0070 // 06cb:     WORD PIN
+0311 // 06cc:     WORD FETCH
+0077 // 06cd:     WORD NUMTIB
+0311 // 06ce:     WORD FETCH
+0409 // 06cf:     WORD ADD_
+033e // 06d0:     WORD CSTORE                         ; and put terminating carriage return
+01d1 // 06d1:     WORD EXIT
+067c // 06d2:     WORD PUT                            ; otherwise put character in input
+01f3 // 06d3:     WORD BRANCH                         ; and get next input
+06b8 // 06d4:     WORD INLINE0
+0453 // 06d5: SYM'S STRING STR                        ; name string
+4b49 // 06d6: SYM'S STRING STR                        ; name string
+5000 // 06d7: SYM'S STRING STR                        ; name string
+06d5 // 06d8:     WORD SYM'S                          ; name pointer
+06af // 06d9: SYM'N WORD LASTWORD                     ; link pointer
+000a // 06da: SYM WORD DOENTER                        ; code pointer
+0259 // 06db:     WORD DUP
+0070 // 06dc:     WORD PIN
+0311 // 06dd:     WORD FETCH                          ; get input pointer
+031a // 06de:     WORD CFETCH                         ; get input character
+0397 // 06df:     WORD EQUAL
+01fe // 06e0:     WORD ZBRANCH                        ; if equal
+06e7 // 06e1:     WORD SKIP1
+02b7 // 06e2:     WORD ONE
+0070 // 06e3:     WORD PIN
+035f // 06e4:     WORD ADDSTORE                       ; then advance input pointer
+01f3 // 06e5:     WORD BRANCH                         ; and repeat
+06db // 06e6:     WORD SKIP0
+0245 // 06e7:     WORD DROP
+01d1 // 06e8:     WORD EXIT
+0550 // 06e9: SYM'S STRING STR                        ; name string
+4152 // 06ea: SYM'S STRING STR                        ; name string
+5345 // 06eb: SYM'S STRING STR                        ; name string
+06e9 // 06ec:     WORD SYM'S                          ; name pointer
+06d9 // 06ed: SYM'N WORD LASTWORD                     ; link pointer
+000a // 06ee: SYM WORD DOENTER                        ; code pointer
+0070 // 06ef:     WORD PIN
+0311 // 06f0:     WORD FETCH
+031a // 06f1:     WORD CFETCH                         ; read first character
+0090 // 06f2:     WORD CR
+0397 // 06f3:     WORD EQUAL                          ; if it is carriage return
+01fe // 06f4:     WORD ZBRANCH
+06f9 // 06f5:     WORD PARSE0
+0245 // 06f6:     WORD DROP
+02ae // 06f7:     WORD ZERO                           ; push zero flag
+01d1 // 06f8:     WORD EXIT
+02f4 // 06f9:     WORD RPUSH                          ; save delimiter
+0070 // 06fa:     WORD PIN
+0311 // 06fb:     WORD FETCH                          ; get start
+02ae // 06fc:     WORD ZERO                           ; initialize length
+027c // 06fd:     WORD OVER
+027c // 06fe:     WORD OVER
+0409 // 06ff:     WORD ADD_
+031a // 0700:     WORD CFETCH                         ; read character
+02e9 // 0701:     WORD RFETCH                         ; get delimiter
+03a3 // 0702:     WORD NEQUAL
+01fe // 0703:     WORD ZBRANCH                        ; if not equal
+0708 // 0704:     WORD PARSE2
+0421 // 0705:     WORD ONEADD                         ; then increment length
+01f3 // 0706:     WORD BRANCH                         ; and repeat
+06fd // 0707:     WORD PARSE1
+02df // 0708:     WORD RPOP
+0245 // 0709:     WORD DROP
+0259 // 070a:     WORD DUP
+0070 // 070b:     WORD PIN
+0311 // 070c:     WORD FETCH
+0409 // 070d:     WORD ADD_                           ; adjust input pointer
+0070 // 070e:     WORD PIN
+0333 // 070f:     WORD STORE
+02c1 // 0710:     WORD NONE                           ; push true flag
+01d1 // 0711:     WORD EXIT
+0554 // 0712: SYM'S STRING STR                        ; name string
+4f4b // 0713: SYM'S STRING STR                        ; name string
+454e // 0714: SYM'S STRING STR                        ; name string
+0712 // 0715:     WORD SYM'S                          ; name pointer
+06ed // 0716: SYM'N WORD LASTWORD                     ; link pointer
+000a // 0717: SYM WORD DOENTER                        ; code pointer
+0096 // 0718:     WORD SP
+06da // 0719:     WORD SKIP                           ; skip leading spaces
+0096 // 071a:     WORD SP
+06ee // 071b:     WORD PARSE                          ; parse until space
+01fe // 071c:     WORD ZBRANCH                        ; if parse was successful
+0723 // 071d:     WORD TOKEN0
+005d // 071e:     WORD HERE_
+0311 // 071f:     WORD FETCH
+0180 // 0720:     WORD PACKS                          ; then copy string to dictionary
+02c1 // 0721:     WORD NONE                           ; and push true flag
+01d1 // 0722:     WORD EXIT
+02ae // 0723:     WORD ZERO                           ; otherwise push zero flag
+01d1 // 0724:     WORD EXIT
+0443 // 0725: SYM'S STRING STR                        ; name string
+4841 // 0726: SYM'S STRING STR                        ; name string
+5200 // 0727: SYM'S STRING STR                        ; name string
+0725 // 0728:     WORD SYM'S                          ; name pointer
+0716 // 0729: SYM'N WORD LASTWORD                     ; link pointer
+000a // 072a: SYM WORD DOENTER                        ; code pointer
+0096 // 072b:     WORD SP
+06da // 072c:     WORD SKIP                           ; skip leading spaces
+0096 // 072d:     WORD SP
+06ee // 072e:     WORD PARSE                          ; parse until space
+01fe // 072f:     WORD ZBRANCH
+0734 // 0730:     WORD CHAR0
+0245 // 0731:     WORD DROP                           ; ignore length
+031a // 0732:     WORD CFETCH                         ; get first character
+01d1 // 0733:     WORD EXIT
+02ae // 0734:     WORD ZERO
+01d1 // 0735:     WORD EXIT
+053e // 0736: SYM'S STRING STR                        ; name string
+4e41 // 0737: SYM'S STRING STR                        ; name string
+4d45 // 0738: SYM'S STRING STR                        ; name string
+0736 // 0739:     WORD SYM'S                          ; name pointer
+0729 // 073a: SYM'N WORD LASTWORD                     ; link pointer
+000a // 073b: SYM WORD DOENTER                        ; code pointer
+0433 // 073c:     WORD ONESUB                         ; get name field
+0311 // 073d:     WORD FETCH                          ; read name field
+01d1 // 073e:     WORD EXIT
+053e // 073f: SYM'S STRING STR                        ; name string
+4e45 // 0740: SYM'S STRING STR                        ; name string
+5854 // 0741: SYM'S STRING STR                        ; name string
+073f // 0742:     WORD SYM'S                          ; name pointer
+073a // 0743: SYM'N WORD LASTWORD                     ; link pointer
+000a // 0744: SYM WORD DOENTER                        ; code pointer
+0311 // 0745:     WORD FETCH                          ; read next field
+01d1 // 0746:     WORD EXIT
+053e // 0747: SYM'S STRING STR                        ; name string
+434f // 0748: SYM'S STRING STR                        ; name string
+4445 // 0749: SYM'S STRING STR                        ; name string
+0747 // 074a:     WORD SYM'S                          ; name pointer
+0743 // 074b: SYM'N WORD LASTWORD                     ; link pointer
+000a // 074c: SYM WORD DOENTER                        ; code pointer
+0421 // 074d:     WORD ONEADD                         ; get code field
+01d1 // 074e:     WORD EXIT
+0553 // 074f: SYM'S STRING STR                        ; name string
+414d // 0750: SYM'S STRING STR                        ; name string
+453f // 0751: SYM'S STRING STR                        ; name string
+074f // 0752:     WORD SYM'S                          ; name pointer
+074b // 0753: SYM'N WORD LASTWORD                     ; link pointer
+000a // 0754: SYM WORD DOENTER                        ; code pointer
+027c // 0755:     WORD OVER
+0311 // 0756:     WORD FETCH                          ; get first string word
+027c // 0757:     WORD OVER
+0311 // 0758:     WORD FETCH                          ; get second string word
+0397 // 0759:     WORD EQUAL
+01fe // 075a:     WORD ZBRANCH                        ; if first words are equal
+0774 // 075b:     WORD SAMEQ3
+027c // 075c:     WORD OVER
+02ff // 075d:     WORD ATOCA
+031a // 075e:     WORD CFETCH                         ; then get the number of characters
+0309 // 075f:     WORD CATOA                          ; convert into number of words
+02f4 // 0760:     WORD RPUSH
+01f3 // 0761:     WORD BRANCH                         ; and compare remaining characters
+076d // 0762:     WORD SAMEQ1
+0421 // 0763:     WORD ONEADD                         ; increment pointer
+0289 // 0764:     WORD SWAP
+0421 // 0765:     WORD ONEADD                         ; increment pointer
+027c // 0766:     WORD OVER
+0311 // 0767:     WORD FETCH                          ; get word
+027c // 0768:     WORD OVER
+0311 // 0769:     WORD FETCH                          ; get word
+0397 // 076a:     WORD EQUAL
+01fe // 076b:     WORD ZBRANCH
+0772 // 076c:     WORD SAMEQ2                         ; if words are equal
+020b // 076d:     WORD LNEXT                          ; then repeat
+0763 // 076e:     WORD SAMEQ0
+024f // 076f:     WORD DDROP
+02c1 // 0770:     WORD NONE                           ; until end of strings
+01d1 // 0771:     WORD EXIT
+02df // 0772:     WORD RPOP
+0245 // 0773:     WORD DROP
+024f // 0774:     WORD DDROP
+02ae // 0775:     WORD ZERO
+01d1 // 0776:     WORD EXIT
+054e // 0777: SYM'S STRING STR                        ; name string
+414d // 0778: SYM'S STRING STR                        ; name string
+453f // 0779: SYM'S STRING STR                        ; name string
+0777 // 077a:     WORD SYM'S                          ; name pointer
+0753 // 077b: SYM'N WORD LASTWORD                     ; link pointer
+000a // 077c: SYM WORD DOENTER                        ; code pointer
+0064 // 077d:     WORD LAST
+0311 // 077e:     WORD FETCH                          ; get the last defined word
+02f4 // 077f:     WORD RPUSH                          ; save word
+01f3 // 0780:     WORD BRANCH
+0785 // 0781:     WORD FIND1
+02df // 0782:     WORD RPOP                           ; restore word
+0744 // 0783:     WORD TONEXT                         ; get next word
+02f4 // 0784:     WORD RPUSH                          ; save word
+02e9 // 0785:     WORD RFETCH                         ; get word
+01fe // 0786:     WORD ZBRANCH                        ; if zero exit
+0792 // 0787:     WORD FIND2
+02e9 // 0788:     WORD RFETCH                         ; get word
+073b // 0789:     WORD TONAME                         ; get word name
+027c // 078a:     WORD OVER
+0754 // 078b:     WORD SAMEQ                          ; compare names
+01fe // 078c:     WORD ZBRANCH                        ; if equal
+0782 // 078d:     WORD FIND0
+0245 // 078e:     WORD DROP                           ; then clean up stack
+02df // 078f:     WORD RPOP                           ; and return word
+02c1 // 0790:     WORD NONE                           ; and true flag
+01d1 // 0791:     WORD EXIT
+02df // 0792:     WORD RPOP                           ; restore word
+0245 // 0793:     WORD DROP                           ; clean up stack
+02ae // 0794:     WORD ZERO                           ; return zero flag
+01d1 // 0795:     WORD EXIT
+0644 // 0796: SYM'S STRING STR                        ; name string
+4947 // 0797: SYM'S STRING STR                        ; name string
+4954 // 0798: SYM'S STRING STR                        ; name string
+3f00 // 0799: SYM'S STRING STR                        ; name string
+0796 // 079a:     WORD SYM'S                          ; name pointer
+077b // 079b: SYM'N WORD LASTWORD                     ; link pointer
+000a // 079c: SYM WORD DOENTER                        ; code pointer
+02f4 // 079d:     WORD RPUSH                          ; save base
+01e7 // 079e:     WORD LITERAL
+0030 // 079f:     WORD 48                             ; ASCII '0'
+0428 // 07a0:     WORD SUB_                           ; subtract offset (ASCII '0' to 0)
+01e7 // 07a1:     WORD LITERAL
+0009 // 07a2:     WORD 9
+027c // 07a3:     WORD OVER
+0380 // 07a4:     WORD LESS
+01fe // 07a5:     WORD ZBRANCH                        ; if greater than 9
+07af // 07a6:     WORD DIGITQ0
+01e7 // 07a7:     WORD LITERAL
+0007 // 07a8:     WORD 7                              ; offset from ':' to 'A'
+0428 // 07a9:     WORD SUB_                           ; subtract offset (ASCII 'A' to 10)
+0259 // 07aa:     WORD DUP
+01e7 // 07ab:     WORD LITERAL
+000a // 07ac:     WORD 10
+0380 // 07ad:     WORD LESS                           ; check for ':' to '@'
+03e0 // 07ae:     WORD OR_                            ; if so keep -1 else keep number
+0259 // 07af:     WORD DUP
+02df // 07b0:     WORD RPOP                           ; restore base
+038c // 07b1:     WORD ULESS                          ; unsigned compare with base
+01d1 // 07b2:     WORD EXIT
+074e // 07b3: SYM'S STRING STR                        ; name string
+554d // 07b4: SYM'S STRING STR                        ; name string
+4245 // 07b5: SYM'S STRING STR                        ; name string
+523f // 07b6: SYM'S STRING STR                        ; name string
+07b3 // 07b7:     WORD SYM'S                          ; name pointer
+079b // 07b8: SYM'N WORD LASTWORD                     ; link pointer
+000a // 07b9: SYM WORD DOENTER                        ; code pointer
+02ae // 07ba:     WORD ZERO                           ; number starts at zero
+027c // 07bb:     WORD OVER
+014e // 07bc:     WORD COUNT                          ; get string address/length
+027c // 07bd:     WORD OVER
+031a // 07be:     WORD CFETCH                         ; get character
+01e7 // 07bf:     WORD LITERAL
+002d // 07c0:     WORD 2D                             ; ASCII '-'
+0397 // 07c1:     WORD EQUAL                          ; check for negative sign
+02f4 // 07c2:     WORD RPUSH                          ; save sign
+02e9 // 07c3:     WORD RFETCH
+0409 // 07c4:     WORD ADD_                           ; if negative decrement length
+0289 // 07c5:     WORD SWAP
+02e9 // 07c6:     WORD RFETCH
+0428 // 07c7:     WORD SUB_                           ; if negative increment pointer
+0289 // 07c8:     WORD SWAP
+0270 // 07c9:     WORD QDUP
+01fe // 07ca:     WORD ZBRANCH                        ; if length is zero exit
+07f2 // 07cb:     WORD NUMBERQ3
+0433 // 07cc:     WORD ONESUB                         ; length is at least one
+02f4 // 07cd:     WORD RPUSH                          ; setup loop counter
+02c1 // 07ce:     WORD NONE                           ; number starts out valid
+02a2 // 07cf:     WORD NROT
+0259 // 07d0:     WORD DUP
+02f4 // 07d1:     WORD RPUSH
+031a // 07d2:     WORD CFETCH                         ; get character
+0056 // 07d3:     WORD BASE_
+0311 // 07d4:     WORD FETCH                          ; get base
+079c // 07d5:     WORD DIGITQ                         ; check if digit
+02a2 // 07d6:     WORD NROT
+0289 // 07d7:     WORD SWAP
+0056 // 07d8:     WORD BASE_
+0311 // 07d9:     WORD FETCH                          ; get base
+04a2 // 07da:     WORD MUL                            ; multiply base
+0409 // 07db:     WORD ADD_                           ; add digit
+02a2 // 07dc:     WORD NROT
+03d6 // 07dd:     WORD AND_                           ; keep valid if valid
+0289 // 07de:     WORD SWAP
+02df // 07df:     WORD RPOP
+0421 // 07e0:     WORD ONEADD                         ; increment pointer
+020b // 07e1:     WORD LNEXT
+07d0 // 07e2:     WORD NUMBERQ0
+0245 // 07e3:     WORD DROP
+02df // 07e4:     WORD RPOP                           ; restore sign
+01fe // 07e5:     WORD ZBRANCH                        ; if negative
+07e8 // 07e6:     WORD NUMBERQ1
+04d2 // 07e7:     WORD NEGATE                         ; then negate
+0289 // 07e8:     WORD SWAP
+01fe // 07e9:     WORD ZBRANCH                        ; if number is valid
+07ef // 07ea:     WORD NUMBERQ2
+0289 // 07eb:     WORD SWAP
+0245 // 07ec:     WORD DROP                           ; then drop address
+02c1 // 07ed:     WORD NONE                           ; and push true flag
+01d1 // 07ee:     WORD EXIT
+0245 // 07ef:     WORD DROP                           ; otherwise drop number
+02ae // 07f0:     WORD ZERO                           ; and push zero flag
+01d1 // 07f1:     WORD EXIT
+02df // 07f2:     WORD RPOP
+024f // 07f3:     WORD DDROP
+01d1 // 07f4:     WORD EXIT
+0e45 // 07f5: HELLOSTR STRING "ECE 3710 FORTH"
+4345 // 07f6: HELLOSTR STRING "ECE 3710 FORTH"
+2033 // 07f7: HELLOSTR STRING "ECE 3710 FORTH"
+3731 // 07f8: HELLOSTR STRING "ECE 3710 FORTH"
+3020 // 07f9: HELLOSTR STRING "ECE 3710 FORTH"
+464f // 07fa: HELLOSTR STRING "ECE 3710 FORTH"
+5254 // 07fb: HELLOSTR STRING "ECE 3710 FORTH"
+4800 // 07fc: HELLOSTR STRING "ECE 3710 FORTH"
+0548 // 07fd: SYM'S STRING STR                        ; name string
+454c // 07fe: SYM'S STRING STR                        ; name string
+4c4f // 07ff: SYM'S STRING STR                        ; name string
+07fd // 0800:     WORD SYM'S                          ; name pointer
+07b8 // 0801: SYM'N WORD LASTWORD                     ; link pointer
+000a // 0802: SYM WORD DOENTER                        ; code pointer
+01e7 // 0803:     WORD LITERAL
+07f5 // 0804:     WORD HELLOSTR
+014e // 0805:     WORD COUNT
+019a // 0806:     WORD TYPE
+01d1 // 0807:     WORD EXIT
+0752 // 0808: SYM'S STRING STR                        ; name string
+4553 // 0809: SYM'S STRING STR                        ; name string
+5441 // 080a: SYM'S STRING STR                        ; name string
+5254 // 080b: SYM'S STRING STR                        ; name string
+0808 // 080c:     WORD SYM'S                          ; name pointer
+0801 // 080d: SYM'N WORD LASTWORD                     ; link pointer
+000a // 080e: SYM WORD DOENTER                        ; code pointer
+001d // 080f:     WORD WP0_
+0223 // 0810:     WORD WPSTORE
+0510 // 0811:     WORD DECIMAL
+011c // 0812:     WORD PAGE
+0802 // 0813:     WORD HELLO
+081d // 0814:     WORD QUIT
+0320 // 0815: OKSTR STRING " OK"
+4f4b // 0816: OKSTR STRING " OK"
+013f // 0817: QSTR STRING "?"
+0451 // 0818: SYM'S STRING STR                        ; name string
+5549 // 0819: SYM'S STRING STR                        ; name string
+5400 // 081a: SYM'S STRING STR                        ; name string
+0818 // 081b:     WORD SYM'S                          ; name pointer
+080d // 081c: SYM'N WORD LASTWORD                     ; link pointer
+000a // 081d: SYM WORD DOENTER                        ; code pointer
+0023 // 081e:     WORD RP0_
+02d5 // 081f:     WORD RPSTORE
+01e7 // 0820:     WORD LITERAL
+0815 // 0821:     WORD OKSTR
+014e // 0822:     WORD COUNT
+019a // 0823:     WORD TYPE                           ; output ok prompt
+012c // 0824:     WORD LINE                           ; move to new line
+06b0 // 0825:     WORD INLINE                         ; read line of text
+0717 // 0826:     WORD TOKEN                          ; try parse token
+01fe // 0827:     WORD ZBRANCH                        ; if there was a token
+0820 // 0828:     WORD QUIT0
+077c // 0829:     WORD NAMEQ                          ; try find in dictionary
+01fe // 082a:     WORD ZBRANCH                        ; if found
+0830 // 082b:     WORD QUIT3
+074c // 082c:     WORD TOCODE                         ; get code address
+01dc // 082d:     WORD EXECUTE                        ; execute word
+01f3 // 082e:     WORD BRANCH                         ; goto next token
+0826 // 082f:     WORD QUIT2
+07b9 // 0830:     WORD NUMBERQ                        ; try convert number
+01fe // 0831:     WORD ZBRANCH                        ; if number
+0835 // 0832:     WORD QUIT4
+01f3 // 0833:     WORD BRANCH                         ; leave on stack goto next token
+0826 // 0834:     WORD QUIT2
+0137 // 0835:     WORD SPACE
+014e // 0836:     WORD COUNT
+019a // 0837:     WORD TYPE                           ; output token
+01e7 // 0838:     WORD LITERAL
+0817 // 0839:     WORD QSTR
+014e // 083a:     WORD COUNT
+019a // 083b:     WORD TYPE                           ; output question string
+001d // 083c:     WORD WP0_
+0223 // 083d:     WORD WPSTORE                        ; reset stack
+01f3 // 083e:     WORD BRANCH                         ; read a new line of text
+0820 // 083f:     WORD QUIT0

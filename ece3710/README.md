@@ -39,3 +39,6 @@ Alternatively, you can run the script from the Quartus Tcl console. Open Quartus
 tcl> cd <path_to_respository>
 tcl> source setup_project.tcl
 ```
+
+## Contributor
+Luke stillings, Byron Stewart, Sean Moon, Matthew Lee
